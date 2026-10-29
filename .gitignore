@@ -1,0 +1,27 @@
+# Never commit private research data, authentication, generated records or weights.
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.zip
+*.docx
+*.pdf
+*.log
+*.safetensors
+*.bin
+*.pt
+*.pth
+private/
+private_*/
+raw/
+records/
+outputs/
+_mirror/
+local_config.json
+token
+tokens/
+*.pem
+*.key
+.DS_Store

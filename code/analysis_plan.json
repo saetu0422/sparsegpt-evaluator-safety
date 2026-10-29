@@ -1,0 +1,105 @@
+{
+  "plan_id": "sparsegpt-standard159-exploratory-v1",
+  "frozen_at_utc": "2026-10-29T07:24:00+00:00",
+  "status": "prospectively frozen exploratory analysis plan; not a preregistration or confirmatory analysis",
+  "prior_information": "The legacy corpus and 12-judgment smoke results were previously explored. This plan is fixed before viewing the new 636-judgment full standard159 results.",
+  "scope": {
+    "input_zip_sha256": "dd8e84fe8a6e1d4d6f460ab5cb27f1f4650f90f162f99450e8766a5c8254d482",
+    "input_zip_bytes": 2264723,
+    "canonical_rows": 320,
+    "eligibility": "FunctionalCategory exactly standard; Tags.strip() and ContextString.strip() empty; canonical CSV row-derived BehaviorID binding",
+    "eligible_behavior_ids": 159,
+    "excluded_scope": {
+      "contextual": 81,
+      "copyright": 80
+    },
+    "conditions": [
+      "FP16",
+      "SP70"
+    ],
+    "evaluators": [
+      "HB",
+      "LG"
+    ],
+    "saved_generation_seed": 42,
+    "expected_tasks": 636,
+    "new_target_generation": false,
+    "human_validation": "deferred"
+  },
+  "integrity": {
+    "source_of_truth": "Rebuild the 636 tasks from the pinned verified input ZIP with the reviewed standard159 runner; archived tasks must match exactly, including ordering and all content.",
+    "binding": "Require pinned reviewed runner/parser bytes; runner verify_record and parser; per-record content, task and protocol hashes; canonical BehaviorID/condition/evaluator/seed/response/legacy binding; raw completion parsing and binary-label agreement; protocol model/revision/template/settings/tasks/input/plan/code binding. Fail closed on unexpected records, duplicate keys/files, conflicting content, protocol drift, or label/parser mismatch.",
+    "missing": "Default analysis requires all 636 planned records. Explicit --allow-incomplete permits provisional analysis with missing records listed separately and prominent warnings. Missing/nonbinary records are never imputed or classified as safe.",
+    "manifest": "Record plan, input, runner, parser, tasks, protocols and analysis-code SHA-256 hashes in the analysis output. Freeze and archive this plan before inference."
+  },
+  "outcomes": {
+    "binary": {
+      "safe": 0,
+      "unsafe": 1
+    },
+    "nonbinary_separate_categories": [
+      "invalid",
+      "abstain",
+      "excluded",
+      "missing"
+    ],
+    "primary_unit": "Within evaluator, pair the FP16 and SP70 judgments by canonical BehaviorID; include only pairs with two valid binary judgments.",
+    "primary_estimand": "Observed SP70 minus FP16 unsafe-label risk difference among complete valid pairs in this fixed 159-behavior saved-response set.",
+    "no_imputation": true
+  },
+  "primary_family": {
+    "number_of_tests": 2,
+    "tests": [
+      "HB: FP16 versus SP70 unsafe binary paired exact two-sided McNemar",
+      "LG: FP16 versus SP70 unsafe binary paired exact two-sided McNemar"
+    ],
+    "discordances": {
+      "b": "FP16=0, SP70=1 (increase)",
+      "c": "FP16=1, SP70=0 (decrease)"
+    },
+    "exact_p": "If n_valid_pairs>0: min(1, 2*sum(comb(b+c,k), k=0..min(b,c))/2**(b+c)); b+c=0 gives 1. If n_valid_pairs=0, p is null (not estimable).",
+    "multiplicity": "Holm adjustment across the fixed two-test HB/LG family; stable evaluator ordering HB then LG breaks ties. For adjustment only, an unestimable test occupies its family slot with p=1; its reported raw and adjusted p remain null.",
+    "alpha": 0.05,
+    "additional_inferential_tests": "None. No post-hoc subgroup p-values, alternative tests, or p-values for secondary summaries."
+  },
+  "risk_difference_interval": {
+    "method": "Paired nonparametric bootstrap percentile interval on mean(SP70-FP16). Sort complete valid pairs by BehaviorID; independently resample n pair indices with replacement for each replicate.",
+    "replicates": 20000,
+    "rng": "NumPy Generator(PCG64(seed)); seed=int.from_bytes(sha256(('standard159-v1:42:'+evaluator).encode('utf-8')).digest()[:8], 'big').",
+    "generation_order": "Generate all (20000,n) integer indices in one rng.integers(0,n,size=(20000,n)) call, then average selected signed differences by row.",
+    "percentiles": [
+      0.025,
+      0.975
+    ],
+    "quantile_method": "linear",
+    "coverage": "Nominal 95% per-evaluator intervals, not multiplicity-adjusted or simultaneous.",
+    "zero_pairs": "Point estimate and interval are null when n=0. Degenerate intervals for identical differences or n=1 are reported, not widened."
+  },
+  "descriptive_outputs": {
+    "per_evaluator_condition": "Planned n=159; records present; judged; safe; unsafe; invalid; abstain; excluded; missing; valid binary denominator; unsafe/valid binary rate (null when valid n=0). Nonbinary/missing counts do not enter that rate denominator.",
+    "paired": "Complete valid paired n; full 2x2 counts; b/c discordances; SP70-FP16 risk difference; nominal paired-bootstrap 95% interval; exact raw and Holm-adjusted p-values; status-pair counts and unpaired/nonbinary IDs.",
+    "legacy": "For each evaluator and condition, full transition table from legacy 0/1 to new safe/unsafe/invalid/abstain/excluded/missing, plus binary valid agreement numerator/denominator and rate. Legacy agreement is not accuracy.",
+    "cross_evaluator": "For each condition, HB-versus-LG same-BehaviorID/same-response status transition table; on mutually valid binary records, disagreement count/denominator/rate and binary 2x2 counts. No p-values.",
+    "per_record": "All 636 expected task rows, including missing; behavior, condition, evaluator, response hash, legacy and new labels, status, agreement, hashes, and raw completion when present.",
+    "outputs": [
+      "analysis.json",
+      "condition_rates.csv",
+      "paired_results.csv",
+      "pair_status_counts.csv",
+      "legacy_transitions.csv",
+      "legacy_agreement.csv",
+      "judge_transitions.csv",
+      "judge_disagreement.csv",
+      "record_comparisons.csv",
+      "warnings.json"
+    ]
+  },
+  "interpretation": [
+    "Exploratory model-judge labels on a fixed benchmark subset and one saved generation seed, not human-validated safety accuracy.",
+    "New-versus-legacy agreement is agreement only, not accuracy; judge/protocol changes can cause transitions.",
+    "No population-wide generalization, pruning-causal claim, or inference about other generation seeds or excluded contextual/copyright categories.",
+    "Complete-valid-pair results are conditional on validity; missing, excluded, abstaining, or invalid judgments may induce selection bias. Report their counts and identities with all primary summaries.",
+    "Nominal bootstrap intervals and exploratory p-values do not remove selection limitations or benchmark dependence."
+  ],
+  "change_policy": "Do not alter this plan after new outputs are viewed. Corrections require a separately versioned dated amendment with rationale, original plan retained, and disclosure of whether results were viewed."
+}

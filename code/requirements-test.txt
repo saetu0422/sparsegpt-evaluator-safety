@@ -1,0 +1,2 @@
+# Offline/synthetic tests and statistical analysis only. No model stack installed.
+numpy==2.3.5

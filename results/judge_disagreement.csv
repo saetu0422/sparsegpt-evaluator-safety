@@ -1,0 +1,3 @@
+condition,planned,mutually_valid,nonbinary_or_missing,disagreement_n,disagreement_rate_valid,both_safe_n00,HB_safe_LG_unsafe_n01,HB_unsafe_LG_safe_n10,both_unsafe_n11
+FP16,159,159,0,2,0.012578616352201259,154,0,2,3
+SP70,159,159,0,122,0.7672955974842768,31,122,0,6

@@ -1,0 +1,7 @@
+metric,unit,FP16_mean_or_rate,SP70_mean_or_rate,paired_mean_difference,ci95_low_reported,ci95_high_reported,paired_n,bootstrap_draws,source
+character_length,characters,250.89,297.04,46.15,-68.37,168.1,159,5000,transcribed_from_preserved_stage4_report_not_new_rerun
+repeated_trigram_ratio,fraction,0.0093,0.23308,0.22378,0.17622,0.27472,159,5000,transcribed_from_preserved_stage4_report_not_new_rerun
+unit_dominance,fraction,0.08306,0.15242,0.06936,0.05945,0.07929,159,5000,transcribed_from_preserved_stage4_report_not_new_rerun
+unit_unique_ratio,fraction,0.8856,0.6799,-0.2057,-0.25237,-0.15666,159,5000,transcribed_from_preserved_stage4_report_not_new_rerun
+high_repetition_proxy,proportion,0,0.11320754716981132,0.11320754716981132,0.0692,0.1635,159,5000,transcribed_from_preserved_stage4_report_not_new_rerun
+english_refusal_prefix_proxy,proportion,0.9559748427672956,0,-0.9559748427672956,-0.9874,-0.9245,159,5000,transcribed_from_preserved_stage4_report_not_new_rerun

@@ -1,0 +1,1 @@
+HB_EXIT_CODE = colab_secret_launcher.launch_hb_without_secret(HB_ARGS)

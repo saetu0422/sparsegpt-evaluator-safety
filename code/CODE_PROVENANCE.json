@@ -1,0 +1,152 @@
+{
+  "schema": "public-code-provenance-v1",
+  "purpose": "Separate historical execution bytes from privacy-sanitized public deployment/test copies. Hashes are integrity identifiers, not proof of independent review or authenticity.",
+  "manifest_self_hash": "Not self-referential; the repository release manifest covers this file.",
+  "historical_inference_rerun_performed": false,
+  "private_inputs_included": false,
+  "files": [
+    {
+      "path": "COLAB_RUN_HB.py",
+      "release_bytes": 71,
+      "release_sha256": "884b60bf281e751d8fac81a5e464ebdddac7b8145256855844a55dc573460bd0",
+      "historical_source_sha256": "884b60bf281e751d8fac81a5e464ebdddac7b8145256855844a55dc573460bd0",
+      "byte_identical_to_historical_source": true
+    },
+    {
+      "path": "COLAB_RUN_LG_SECRETS.py",
+      "release_bytes": 167,
+      "release_sha256": "36ef0ba66f80dddfb259fdb63a665ca4faada92e52708cb31d221fc1ed1555fa",
+      "historical_source_sha256": "36ef0ba66f80dddfb259fdb63a665ca4faada92e52708cb31d221fc1ed1555fa",
+      "byte_identical_to_historical_source": true
+    },
+    {
+      "path": "COLAB_SETUP_STANDARD159.py",
+      "release_bytes": 3012,
+      "release_sha256": "8aa9bc0eed9deabd6e4fc0fb07f518bae5ee266afcf65eb861782efca442d8f5",
+      "historical_source_sha256": "5c2e79a23ea68957fa831bbee1fa8dc87008477774aa2f079f1588cfc71fee1e",
+      "byte_identical_to_historical_source": false
+    },
+    {
+      "path": "EXPORT_FULL159_RESULTS_V2.py",
+      "release_bytes": 20594,
+      "release_sha256": "282234b6a3c26334476d156fb2fc7c78633d4b5e000ba8c1d92092fac100210f",
+      "historical_source_sha256": "ac96700a920aa2ce09a6145885ae72710c665b95d353ab28c6d866f1598dc8aa",
+      "byte_identical_to_historical_source": false
+    },
+    {
+      "path": "HB_standard_template.txt",
+      "release_bytes": 1357,
+      "release_sha256": "6e40c2f76a74aa2dc38d83b557220017311e29c249d938a256c3f0a2d87f0cac",
+      "historical_source_sha256": "6e40c2f76a74aa2dc38d83b557220017311e29c249d938a256c3f0a2d87f0cac",
+      "byte_identical_to_historical_source": true
+    },
+    {
+      "path": "analysis.py",
+      "release_bytes": 29452,
+      "release_sha256": "f91a8a4c9e1a2bb349c565b06baf7beea744c3863d603ba58db84d74712e4bb0",
+      "historical_source_sha256": "f91a8a4c9e1a2bb349c565b06baf7beea744c3863d603ba58db84d74712e4bb0",
+      "byte_identical_to_historical_source": true
+    },
+    {
+      "path": "analysis_plan.json",
+      "release_bytes": 6935,
+      "release_sha256": "ea8e753776999b6b28868f9f692d8b6459685f598de1677c8802bfe98f776dfa",
+      "historical_source_sha256": "ea8e753776999b6b28868f9f692d8b6459685f598de1677c8802bfe98f776dfa",
+      "byte_identical_to_historical_source": true
+    },
+    {
+      "path": "colab_secret_launcher.py",
+      "release_bytes": 2575,
+      "release_sha256": "5d07ffca7bfb089f53909a1337506a1f91d8a15f2e51382dd02dcc75644d062e",
+      "historical_source_sha256": "5d07ffca7bfb089f53909a1337506a1f91d8a15f2e51382dd02dcc75644d062e",
+      "byte_identical_to_historical_source": true
+    },
+    {
+      "path": "colab_smoke.py",
+      "release_bytes": 22135,
+      "release_sha256": "d56b4e1a67b2f0b801ba98f46e65e4052e1e60217ea102d037520b455eb353ee",
+      "historical_source_sha256": "d56b4e1a67b2f0b801ba98f46e65e4052e1e60217ea102d037520b455eb353ee",
+      "byte_identical_to_historical_source": true
+    },
+    {
+      "path": "drive_wrapper.py",
+      "release_bytes": 42433,
+      "release_sha256": "9d8934bd7af0e0bf69d610ade2a6e91f4cd42f7cabbb654ecfa9f48e14d657b8",
+      "historical_source_sha256": "dfe6c6b49e5e78468e89543342213cdce4b2dbb9ce38d1c957cb41af3b5ebb7e",
+      "byte_identical_to_historical_source": false
+    },
+    {
+      "path": "requirements-test.txt",
+      "release_bytes": 96,
+      "release_sha256": "c206255b10e61f575fa990235604a801fbc64ebbaf8104039e2ad214228a64b8",
+      "new_for_publication": true
+    },
+    {
+      "path": "research_parsers.py",
+      "release_bytes": 2964,
+      "release_sha256": "6616ea2e9fd27ced56a6e00bc73340bfa6e92cb0c6ee5a213382b6732bd0cbc8",
+      "historical_source_sha256": "6616ea2e9fd27ced56a6e00bc73340bfa6e92cb0c6ee5a213382b6732bd0cbc8",
+      "byte_identical_to_historical_source": true
+    },
+    {
+      "path": "synthetic_fixtures.py",
+      "release_bytes": 1639,
+      "release_sha256": "ce91ebd6754c95256afc747f19de47de184fd2e38cfcf2b653697059ec2ba622",
+      "new_for_publication": true
+    },
+    {
+      "path": "test_analysis.py",
+      "release_bytes": 24532,
+      "release_sha256": "87cad2daf18429739fcb9037ad540dcd463ca6c2218b37e3bb518900fdf236b8",
+      "historical_source_sha256": "478baac53bf0a4c9f7170cc236446caf67b587a74d5655739d2e84aafcedb3f4",
+      "byte_identical_to_historical_source": false
+    },
+    {
+      "path": "test_drive_wrapper.py",
+      "release_bytes": 17559,
+      "release_sha256": "04c099511bea65bc01d54feae61ecf2f3f9d78950616fd5aa5145f3a5a18b9a3",
+      "historical_source_sha256": "9c37d15e91f8e729e0d1ad894abf35a2dba36c5befcfb4eb1508323ab58ca834",
+      "byte_identical_to_historical_source": false
+    },
+    {
+      "path": "test_export_full159_v2.py",
+      "release_bytes": 15409,
+      "release_sha256": "7b86395cce3322dbdf0fa137dfcec68de2d538381d5b7a8c6933a2264955ea48",
+      "historical_source_sha256": "5f60099a4b6d1976634c5838b7f029bf1c76d9314d7cee5c92badf1368af6b9b",
+      "byte_identical_to_historical_source": false
+    },
+    {
+      "path": "test_lg_auth.py",
+      "release_bytes": 11283,
+      "release_sha256": "931638fbfa47c4ca6ca8690445e46bf396ccb0db08d39d7bf2a6c644e84ed36e",
+      "historical_source_sha256": "fe3618c5df0a1a6131a2c2debf12b2599bf8a9a38d1f2e11c086e00db94fd657",
+      "byte_identical_to_historical_source": false
+    },
+    {
+      "path": "test_release_config.py",
+      "release_bytes": 2825,
+      "release_sha256": "ff6b916d17bd45f83cf0f510db62f04b0e9dfe815017c0c373807d10aa92af23",
+      "new_for_publication": true
+    },
+    {
+      "path": "test_standard159.py",
+      "release_bytes": 7680,
+      "release_sha256": "40fe78bebbb7ba2f30e8fb92f0a16a7ad6bebfcb47a766e291844a5b24b8170a",
+      "historical_source_sha256": "ff13c02397095572d1447f83023e8be2f978aa28c77f41dc5e79ebdfad88b8e1",
+      "byte_identical_to_historical_source": false
+    },
+    {
+      "path": "test_tokenizer_v5.py",
+      "release_bytes": 2625,
+      "release_sha256": "bd0c3859f373ff86b288e4df69d4e5d91b53b17eb6e54175867056d66b0f9b56",
+      "historical_source_sha256": "489e130c4524f798e099ee82f4a579fbe6dda90675248793833fecfb33dc8d81",
+      "byte_identical_to_historical_source": false
+    },
+    {
+      "path": "verify_release.py",
+      "release_bytes": 1001,
+      "release_sha256": "4e6946cdb035396258ae19963d44ea792a838d8f6775b9e994edd48b61d17fee",
+      "new_for_publication": true
+    }
+  ]
+}

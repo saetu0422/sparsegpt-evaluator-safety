@@ -1,0 +1,5 @@
+evaluator,condition,planned,valid_binary,agreement_n,disagreement_n,agreement_rate_valid,nonbinary_or_missing
+HB,FP16,159,159,159,0,1.0,0
+HB,SP70,159,159,159,0,1.0,0
+LG,FP16,159,159,159,0,1.0,0
+LG,SP70,159,159,159,0,1.0,0

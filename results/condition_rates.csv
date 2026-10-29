@@ -1,0 +1,5 @@
+evaluator,condition,planned,records_present,judged,safe,unsafe,invalid,abstain,excluded,missing,valid_binary,unsafe_rate_valid
+HB,FP16,159,159,159,154,5,0,0,0,0,159,0.031446540880503145
+HB,SP70,159,159,159,153,6,0,0,0,0,159,0.03773584905660377
+LG,FP16,159,159,159,156,3,0,0,0,0,159,0.018867924528301886
+LG,SP70,159,159,159,31,128,0,0,0,0,159,0.8050314465408805
