@@ -4,6 +4,30 @@
 
 SparseGPT 저장 응답의 안전성 평가자 차이를 조사한 **탐색적 연구 기록과 재사용 코드**입니다. This is a curated research release, not a safety benchmark leaderboard or a claim of evaluator accuracy.
 
+## 날짜별 실험 기록 / Daily research log
+
+날짜가 확인된 실제 수행 내용을 기록합니다. **모델 판정 실행, 코드 준비, 통계·품질 분석, 준비도 감사는 구분**하며, 계획만 있는 작업을 완료로 표시하지 않습니다. 날짜 근거가 없는 이전 준비·분석 단계는 임의로 날짜를 붙이지 않고 [단계별 연구 기록](docs/RESEARCH_HISTORY.md)에 남깁니다.
+
+### 2026-10-30 — 중간 조건 재판정·품질 분석·준비도 감사
+
+- **목적:** FP16/SP70 비교를 보완할 중간 조건의 평가자 라벨을 확인하고, 저장 응답의 표면적 품질 및 미평가 범주의 실행 준비도를 점검했습니다.
+- **조건:** standard159, 저장 생성 seed42, SP30·SP40·SP50·SP55·SP60 × HB/LG. **1,590개 신규 판정 + 전일 FP16 318개 재사용 = 분석 1,908개**입니다. SP70은 오늘의 주검정에서 제외했습니다.
+- **실제 실행·주요 결과:** 1,590개 모두 유효 이진 판정으로 완료했고 누락·invalid·abstain·excluded는 0개였습니다. FP16 대비 고정 **Holm10**에서 7개 비교가 .05 기준으로 기각되었습니다(HB SP40/50/55/60, LG SP50/55/60). 타깃 응답을 새로 생성하지 않았습니다.
+- **분석·감사:** 7조건의 저장 응답 1,113개에 대해 **quality-reconstruction-v2** 기술통계와 검증된 라벨 2,226개의 동일 응답 연결을 확인했습니다. 원래 코드 복구가 아닌 새 구현이며, 원래 regex가 확인되지 않은 거절 접두어 지표는 제외했습니다. contextual81/copyright80은 준비도 감사만 했고 새 점수는 산출하지 않았습니다.
+- **검증·한계:** 별도 백엔드 원시자료 검증, 실제 통계 독립 검토, 품질 재구성 독립 검토를 통과했습니다. 인간 검증은 보류입니다. HB의 SP55→SP60 감소가 있으므로 단조성·임계점·인과효과를 주장하지 않습니다.
+- **자료:** [판정 결과·집계](results/2026-10-30_intermediate159/README.md) · [품질 결과](results/2026-10-30_quality/README.md) · [방법](docs/2026-10-30_METHODS.md) · [준비도 감사](docs/2026-10-30_READINESS.md) · [검증 기록](docs/2026-10-30_REVIEW.md) · [실행 코드·테스트](experiments/2026-10-30_intermediate159/README.md)
+
+### 2026-10-29 — FP16/SP70 standard159 전체 재판정
+
+- **목적:** 고정된 새 평가 절차로 FP16과 SP70 저장 응답의 HB/LG 라벨 차이를 비교했습니다. 과거 평가 실행의 완전 재현을 주장하는 실험은 아닙니다.
+- **조건:** standard159, 저장 생성 seed42, FP16·SP70 × HB/LG, **636개 신규 판정**. 별도 12개 smoke 판정은 이 수에 포함하지 않았습니다. 타깃은 Meta-Llama-3-8B-Instruct의 저장 응답이며 Base 모델이 아닙니다.
+- **실제 실행·주요 결과:** 636개 모두 유효 이진 판정으로 완료했고 누락·invalid·abstain·excluded는 0개였습니다. unsafe 라벨 수는 HB **5→6/159**, LG **3→128/159**였으며, 636개 모두 legacy 라벨과 일치했습니다. 일치는 정확도가 아닙니다.
+- **분석:** 전향적으로 동결한 탐색적 계획에 따라 paired exact McNemar, 고정 **Holm2**, 20,000회 paired-bootstrap 분석을 수행했습니다. 구간은 개별 비교의 nominal 95%이며 다중비교 보정 구간이 아닙니다.
+- **검증·한계:** 원시자료·저장 아카이브·통계의 독립 검증을 완료했습니다. 새 타깃 생성이나 인간 평가는 수행하지 않았고, 전체320문항·인과효과·인간 기준 정확도로 일반화하지 않습니다.
+- **자료:** [판정 집계](results/condition_rates.csv) · [짝지은 비교](results/paired_results.csv) · [과학적 출처](results/scientific_provenance.json) · [연구 기록](docs/RESEARCH_HISTORY.md) · [검증 기록](docs/REVIEW_STATUS.md) · [코드·재현 방법](docs/REPRODUCIBILITY.md)
+
+**이후 기록 형식:** 매일 GitHub 정리 시 해당 날짜의 **목적 → 조건 → 실제 실행/준비 상태 → 결과 → 검증·미완료 사항 → 공개 코드·집계 링크**를 추가합니다. 기존 날짜의 결과와 검정군은 보존하고, 새 결과나 재사용한 기준선을 명확히 구분합니다.
+
 ## 2026-10-30 — 중간 조건 / Intermediate conditions
 
 **All 1,590 new labels are valid binary**, with no missing, invalid, abstaining or excluded records. The same 159 standard saved responses per condition were rejudged with HB/LG; no target generation or human rating collection was added.
