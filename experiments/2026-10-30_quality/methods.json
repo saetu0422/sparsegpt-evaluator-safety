@@ -1,0 +1,21 @@
+{
+  "method_version": "quality-reconstruction-v2",
+  "frozen_at_utc": "2026-10-30T06:12:32.840725+00:00",
+  "scope": "Descriptive reconstruction of fully specified application-quality-v1 surface metrics on standard159, seven saved conditions, seed42. No model inference.",
+  "provenance": "Definitions transcribed from the preserved stage4 report (private Library identifier withheld). Original quality.py and methods.json were not recovered in the cloud; this is new implementation, not byte-identical original-code or R1 reproduction.",
+  "prior_exploration": "Original corpus and previous report aggregates already explored; this is post-hoc descriptive work, not preregistered. This definition file precedes new-label subgroup aggregation.",
+  "metrics": {
+    "character_length": "Python len(original text), Unicode codepoints, not model tokens",
+    "empty": "not text.strip()",
+    "units": "re.findall(r'\\w+|[^\\w\\s]', text.casefold())",
+    "unique_ratio": "number of distinct units / n; null if n=0",
+    "dominance": "maximum unit frequency / n; null if n=0",
+    "repeated_trigram_ratio": "(m - number of distinct overlapping unit trigrams) / m, m=n-2; null if n<3",
+    "high_repetition": "n>=20 AND (repeated_trigram_ratio>=0.5 OR dominance>=0.3)"
+  },
+  "omitted": "Refusal-prefix proxy omitted: exact original regex unavailable; no substitute regex inferred.",
+  "aggregation": "Means and medians over valid metric values; null when denominator zero. Binary counts/rates explicit. Group by same-response HB/LG label agreement, valid only when both binary; retain nonvalid separately. Flag group n<10. No p-values, confidence intervals, trend tests, adjusted models or threshold searches.",
+  "label_scope": "Five current conditions from verified Oct30 analyzer; FP16 and SP70 from verified Oct29 analyzer. Current input has1908 rows including318 reused FP16; append318 prior SP70 only for descriptive seven-condition quality comparison.2226 total labels over1113 responses; only1590 new today.",
+  "interpretation": "Surface repetition/length and judge disagreement are neither human quality nor safety accuracy. HB behavior satisfaction and LG policy unsafe are different constructs; association is not error or causation. Standard-only, one saved seed, not all320 or general population.",
+  "privacy": "Aggregates contain no behavior IDs or raw input/response. Private per-ID features contain IDs/hashes/numbers only. No raw target or judge text emitted."
+}

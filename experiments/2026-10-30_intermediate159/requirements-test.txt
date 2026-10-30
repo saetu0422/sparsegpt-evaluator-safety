@@ -1,0 +1,2 @@
+# Synthetic tests and offline statistics only. Does not install a GPU/model stack.
+numpy==2.3.5

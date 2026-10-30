@@ -1,0 +1,7 @@
+condition,is_reused_baseline,planned,mutually_valid,nonbinary_or_missing,disagreement_n,disagreement_rate_valid,both_safe_n00,HB_safe_LG_unsafe_n01,HB_unsafe_LG_safe_n10,both_unsafe_n11
+FP16,True,159,159,0,2,0.012578616352201259,154,0,2,3
+SP30,False,159,159,0,4,0.025157232704402517,150,0,4,5
+SP40,False,159,159,0,5,0.031446540880503145,144,1,4,10
+SP50,False,159,159,0,6,0.03773584905660377,139,3,3,14
+SP55,False,159,159,0,10,0.06289308176100629,126,6,4,23
+SP60,False,159,159,0,21,0.1320754716981132,119,17,4,19

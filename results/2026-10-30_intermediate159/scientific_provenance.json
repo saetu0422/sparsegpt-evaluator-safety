@@ -1,0 +1,174 @@
+{
+  "release_date": "2026-10-30",
+  "scope": {
+    "canonical_rows": 320,
+    "standard_rows": 159,
+    "excluded_contextual": 81,
+    "excluded_copyright_hash_check": 80,
+    "new_conditions": [
+      "SP30",
+      "SP40",
+      "SP50",
+      "SP55",
+      "SP60"
+    ],
+    "saved_generation_seed": 42,
+    "new_judgments": 1590,
+    "new_valid_binary": 1590,
+    "new_safe": 1402,
+    "new_unsafe": 188,
+    "new_missing": 0,
+    "new_invalid": 0,
+    "new_abstain": 0,
+    "new_excluded": 0,
+    "reused_FP16_judgments": 318,
+    "total_analysis_records": 1908,
+    "prior_SP70_records_verified_but_excluded_from_primary_analysis": 318,
+    "new_target_generation": false,
+    "human_validation": "deferred; no human truth labels",
+    "id_binding": "canonical CSV row-derived, not native source IDs"
+  },
+  "analysis": {
+    "type": "prospectively locally frozen exploratory; not preregistered or confirmatory",
+    "original_plan_sha256": "473ecba7402b70a171b0589e8eb761cbe802330bd6de4d717a31e948aa94a5c7",
+    "frozen_at_utc": "2026-10-30T03:46:36.916135+00:00",
+    "public_plan_is_nonidentical_nonexecutable_projection": true,
+    "primary_family_size": 10,
+    "primary_test": "exact two-sided paired McNemar",
+    "adjustment": "Holm across all ten contrasts versus reused FP16",
+    "alpha": 0.05,
+    "reject_holm_count": 7,
+    "bootstrap_replicates": 20000,
+    "bootstrap_generator": "PCG64; frozen condition/evaluator-specific streams",
+    "interval_scope": "nominal per-contrast 95%; not simultaneous, multiplicity-adjusted, or exact-test inversion",
+    "descriptive_only": [
+      "judge disagreement",
+      "legacy agreement",
+      "trend",
+      "quality subgroups"
+    ],
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.3.5"
+    }
+  },
+  "evaluators": {
+    "HB": {
+      "model_id": "cais/HarmBench-Llama-2-13b-cls",
+      "model_revision": "bda705349d1144fa618770bea64d99ce54e3835b",
+      "tokenizer_revision": "bda705349d1144fa618770bea64d99ce54e3835b",
+      "template_sha256": "6e40c2f76a74aa2dc38d83b557220017311e29c249d938a256c3f0a2d87f0cac",
+      "settings": {
+        "do_sample": false,
+        "dtype": "float16",
+        "max_new_tokens": 1,
+        "quantization": "none",
+        "seed": 42,
+        "temperature_inactive": 0,
+        "top_p_inactive": 1
+      },
+      "token_policy": "HB right clip generation512 encode/decode, full prompt left2048; LG no truncate cap8192",
+      "parser_version": "judge-schema-1"
+    },
+    "LG": {
+      "model_id": "meta-llama/Llama-Guard-3-8B",
+      "model_revision": "7327bd9f6efbbe6101dc6cc4736302b3cbb6e425",
+      "tokenizer_revision": "7327bd9f6efbbe6101dc6cc4736302b3cbb6e425",
+      "template_sha256": "5a5561f4ea9576d49d8b81328d0c7c42353549a9d610e0855ff107bf9a04c1f8",
+      "settings": {
+        "do_sample": false,
+        "dtype": "float16",
+        "max_new_tokens": 128,
+        "quantization": "none",
+        "seed": 42,
+        "temperature_inactive": 0,
+        "top_p_inactive": 1
+      },
+      "token_policy": "HB right clip generation512 encode/decode, full prompt left2048; LG no truncate cap8192",
+      "parser_version": "judge-schema-1"
+    }
+  },
+  "protocol_comparability": "Scientific model/tokenizer/template/settings/parser/package pins verified equal to the prior baseline. Prior-day runtime reuse remains a comparability limitation.",
+  "HB_template_note": "Whitespace-adapted from upstream HarmBench standard prompt: one blank line removed before --- and before Answer. Experimental template bytes retained.",
+  "original_execution_sources": {
+    "runner_sha256": "5b63875349cf6409397282f4ce765dc8503ac8a32d5fec44ec5ab0793ccd1583",
+    "parser_sha256": "6616ea2e9fd27ced56a6e00bc73340bfa6e92cb0c6ee5a213382b6732bd0cbc8",
+    "wrapper_sha256": "8dbb8f1ce81a012e794025fcbab4380d7419afd20c2eb2f9dcaf7799987eb8aa",
+    "analyzer_sha256": "19086f88ea3dbaf15bb078e33687a63d2cb94733427b9ed19c985c589900d7d2",
+    "baseline_validator_sha256": "f91a8a4c9e1a2bb349c565b06baf7beea744c3863d603ba58db84d74712e4bb0",
+    "exporter_sha256": "cdd209c3c8e996ffbaa471ec983a64715e144a5856638f9bb7e0d89f32be93e5",
+    "reviewed_bundle_sha256": "2a4b28ce2b44e6e3d841dd5f9bd7891083368d9b8dbaebd1f8a04ad77d88a70b",
+    "public_deployment_copies_are_distinct": "See the versioned CODE_PROVENANCE.json; do not apply original deployment hashes to sanitized copies."
+  },
+  "private_artifact_fingerprints": {
+    "published": false,
+    "input_zip_sha256": "dd8e84fe8a6e1d4d6f460ab5cb27f1f4650f90f162f99450e8766a5c8254d482",
+    "raw_archive_sha256": "2ec171f76083a34e25b5e49bede9ef652f2d3bc5ea71d63e87325edc05048835",
+    "raw_archive_bytes": 24275002,
+    "zip_members": 5087,
+    "manifest_members_verified": 5086,
+    "prior_archive_sha256": "c97df90714f89e809343c434c474b5a5a15813a0de15e082330353ae3c955957",
+    "analysis_json_sha256": "73d797e9c55ebf8fcd4bc85e0e8d3020ec9e3fb042b1a738c76f5a04be5316d6"
+  },
+  "independent_technical_reviews": {
+    "backend_semantic": {
+      "status": "PASS",
+      "receipt_sha256": "b47f7437250b87b9613049aa1ce5c5eee65c463d95975dc023afd0c9f1be0d64",
+      "verified_at_utc": "2026-10-30T06:15:36.385183+00:00",
+      "scope": "Separate backend archive retrieval plus 1590 task/record/content/raw-parser/token/protocol bindings, 15 checkpoints, output CSV, unchanged prior636 archive and reused318 lineage"
+    },
+    "actual_statistics": {
+      "status": "PASS",
+      "receipt_sha256": "f4a0b3a4579778a2898412c0a9a9fcb7c27540db5b902222d1a28e2e2ebba44f",
+      "reviewed_at_utc": "2026-10-30T06:14:45.058378+00:00",
+      "scope": "Raw-derived labels, all eight source tables, all ten exact McNemar/Holm tests and frozen bootstrap streams; no new inferential tests"
+    },
+    "review_did_not_reexecute_models": true,
+    "human_ground_truth_review": false
+  },
+  "public_table_projection": {
+    "condition_rates": {
+      "source_csv_sha256": "0713971e9fbbb89d94de344e3e39317a74602dcc588d9cc1b1e97af8f46d7879",
+      "public_csv_sha256": "c6fc0a150914047576d5938dfc2eb507b55c54e6581414380070c2940721e8bc",
+      "rows": 12,
+      "removed_columns": [],
+      "other_changes": "CSV line endings normalized to LF; retained cell values unchanged"
+    },
+    "paired_results": {
+      "source_csv_sha256": "0773ea18a4da3d0d26039fb519a0f0d60e40016962154c519265ec5548782a93",
+      "public_csv_sha256": "25ca4c59b5207bfe0a214ebf593fecffe7af751ae22bcb7ea7507e58fe55b408",
+      "rows": 10,
+      "removed_columns": [
+        "nonvalid_pair_details"
+      ],
+      "other_changes": "CSV line endings normalized to LF; retained cell values unchanged"
+    },
+    "judge_disagreement": {
+      "source_csv_sha256": "a9136f0b9eb00799dc9cc6645b8988ea34be5519c0d82daf51cae31af38f9306",
+      "public_csv_sha256": "4bda041a919329ac5d6d1f8949cce49be8c4d811fc176c97a55a6992f4794763",
+      "rows": 6,
+      "removed_columns": [],
+      "other_changes": "CSV line endings normalized to LF; retained cell values unchanged"
+    },
+    "legacy_agreement": {
+      "source_csv_sha256": "d0f13d7e6c5d6aa3baeec4f0d8f2c1e5b65cdead245b3fe5246bf7b4f3ad26f3",
+      "public_csv_sha256": "073ca3ba1cdea589ea7aa2f403979eea712bcc4743d3a19ade37623900fbf061",
+      "rows": 12,
+      "removed_columns": [],
+      "other_changes": "CSV line endings normalized to LF; retained cell values unchanged"
+    }
+  },
+  "limitations": [
+    "Prospectively frozen exploratory analysis, not preregistered or confirmatory; old corpus and FP16/SP70 results were previously explored.",
+    "Judge labels, legacy agreement, and cross-judge agreement are not human-validated accuracy; human validation is deferred.",
+    "Fixed standard159 subset and saved generation seed42 only: no population-wide or pruning-causal claims.",
+    "Primary analyses condition on complete valid binary pairs; missing/nonbinary selection can bias estimates. No imputation.",
+    "Ten contrasts reuse the same previous-day FP16 baseline; Holm10 controls the fixed test family without an independence assumption.",
+    "Bootstrap intervals are nominal95% per contrast, not multiplicity-adjusted or simultaneous across ten contrasts.",
+    "Trend, legacy transitions, and judge disagreement are descriptive only; no additional trend/subgroup/threshold p-values.",
+    "Prior-day runtime baseline reuse remains a comparability limitation even with equal pinned scientific settings.",
+    "HB rates decrease from SP55 to SP60; no monotonicity, pruning threshold or causal conclusion.",
+    "HB behavior-satisfaction and LG policy-unsafe labels are different constructs.",
+    "Target context is Meta-Llama-3-8B-Instruct saved responses, not Base; historical target checkpoint provenance remains incomplete."
+  ]
+}

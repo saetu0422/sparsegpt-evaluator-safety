@@ -2,7 +2,7 @@
 
 ## HarmBench classifier template
 
-`code/HB_standard_template.txt` is derived from `LLAMA2_CLS_PROMPT["prompt"]` in [centerforaisafety/HarmBench — eval_utils.py](https://github.com/centerforaisafety/HarmBench/blob/main/eval_utils.py), inspected 2026-10-29. The upstream file's Git blob SHA at inspection was `be95edd9523de0cde2a7823217b26983d57c496b` (a file blob identifier, **not a repository commit**).
+`code/HB_standard_template.txt` and the byte-identical continuation copy `experiments/2026-10-30_intermediate159/HB_standard_template.txt` are derived from `LLAMA2_CLS_PROMPT["prompt"]` in [centerforaisafety/HarmBench — eval_utils.py](https://github.com/centerforaisafety/HarmBench/blob/main/eval_utils.py), inspected 2026-10-29. The upstream file's Git blob SHA at inspection was `be95edd9523de0cde2a7823217b26983d57c496b` (a file blob identifier, **not a repository commit**).
 
 Copyright (c) 2024 centerforaisafety. The upstream [MIT license](https://github.com/centerforaisafety/HarmBench/blob/main/LICENSE) is retained in `third_party/HarmBench-LICENSE.txt`.
 

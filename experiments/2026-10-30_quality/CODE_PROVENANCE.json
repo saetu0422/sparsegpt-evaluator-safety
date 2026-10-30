@@ -1,0 +1,75 @@
+{
+  "method_version": "quality-reconstruction-v2",
+  "new_implementation_not_original_code_reproduction": true,
+  "refusal_prefix_proxy": "omitted; exact original regex unavailable",
+  "source_definitions": "preserved stage4 report; private identifiers and extract withheld",
+  "source_methods_sha256": "ce015f1b8158814640b15d32d3fa5670d6cac268a1899cdd28e1ca3afad3cafc",
+  "public_methods_sha256": "e71e2b1537acc4a666f0a7e68f9eeb273dd6bc2f0f3c474c41e40267ae619cc5",
+  "methods_redaction": "Only provenance text replaces one private Library identifier with a descriptive reference",
+  "code_files": {
+    "quality.py": {
+      "source_sha256": "c5738a1335b5d4dff8542ecb4ffa29c9b9c5b138d3944e6f35ffd8db85fe7da4",
+      "public_sha256": "c5738a1335b5d4dff8542ecb4ffa29c9b9c5b138d3944e6f35ffd8db85fe7da4",
+      "byte_identical": true
+    },
+    "test_quality.py": {
+      "source_sha256": "17ae4d1d2a2b56d49fcfcdf5435cdf2ebb97c2cb930ee74b2b4939a36303b750",
+      "public_sha256": "17ae4d1d2a2b56d49fcfcdf5435cdf2ebb97c2cb930ee74b2b4939a36303b750",
+      "byte_identical": true
+    }
+  },
+  "scope": {
+    "standard_responses": 1113,
+    "conditions": 7,
+    "rows_per_condition": 159,
+    "saved_seed": 42,
+    "labels": 2226,
+    "new_Oct30_labels": 1590,
+    "reused_Oct29_FP16_labels": 318,
+    "prior_Oct29_SP70_labels": 318,
+    "no_duplicate_FP16": true,
+    "group_metric_rows": 105,
+    "source_320_row_bindings_verified_across_conditions": true,
+    "no_new_inference": true,
+    "no_inferential_tests": true
+  },
+  "independent_review": {
+    "status": "PASS",
+    "receipt_sha256": "08dec74be8fe997d1af2165c871d62b24a914c50d3e5f21d3348af3d52d8fb48",
+    "reviewed_at_utc": "2026-10-30T06:19:38.669032+00:00",
+    "synthetic_tests_passed": 22,
+    "independent_reconstruction": "1113 features, 2226 same-response labels, 105 group rows and 28 prior reported values",
+    "production_rerun": "six private outputs byte-identical; private item-level outputs not published"
+  },
+  "aggregate_outputs": {
+    "condition_quality.csv": {
+      "sha256": "22360f163919ef93b4dec2baf03765d2b752bdcff2d30aeff59b817ccf6c19fb",
+      "projection": "byte-identical aggregate-only CSV; no item identifiers or text"
+    },
+    "quality_by_judge_agreement.csv": {
+      "sha256": "8767326de2ac36347bd6188f12c8f6b4a919a2909c328df5b5852363fc2172cf",
+      "projection": "byte-identical aggregate-only CSV; no item identifiers or text"
+    }
+  },
+  "input_and_label_fingerprints": {
+    "input_zip_sha256": "dd8e84fe8a6e1d4d6f460ab5cb27f1f4650f90f162f99450e8766a5c8254d482",
+    "input_zip_bytes": 2264723,
+    "source_manifest_sha256": "302fc43a4ca3ed075af13fa94077d64c3dbc4a97903ffe8679bbff4d4f769c79",
+    "label_sources": {
+      "labels": 2226,
+      "new_today": 1590,
+      "previous_day": 636,
+      "prior_analysis_csv_sha256": "f1d3557fe3175b66ff725158412b626a0845631c0c2c8c746e272b65095240a1",
+      "same_response_join_verified": true,
+      "today_analysis_csv_sha256": "4cf2886955a5d1245ecc8c1bb236412924b5e6893ea9ee6a0ddb5c44dab9f180"
+    }
+  },
+  "limitations": [
+    "Post-hoc descriptive reconstruction; not preregistration",
+    "Matching 28 rounded prior aggregates does not prove original implementation equivalence",
+    "Surface metrics are not semantic quality, human safety or evaluator accuracy",
+    "Small groups are flagged; null denotes no valid denominator",
+    "FP16 and SP70 label dates differ from the five current conditions",
+    "No monotonicity, threshold or causal claim"
+  ]
+}

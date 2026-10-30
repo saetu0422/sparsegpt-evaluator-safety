@@ -1,0 +1,6 @@
+# This experiment's exact frozen plan contains a private historical run identifier.
+/analysis_plan.json
+# Runtime material belongs in a separate private working copy, not this release.
+/local_config.json
+*.log
+__pycache__/
