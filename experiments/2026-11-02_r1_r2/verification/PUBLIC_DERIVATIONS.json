@@ -1,0 +1,13 @@
+{
+  "source_manifest_role": "ANALYSIS_MANIFEST_PUBLIC.json lists ORIGINAL analysis file fingerprints, not rewritten package hashes. MANIFEST.json verifies the final package.",
+  "tests_log": {
+    "source_sha256": "63d23004c0ed8feb6d372d52d2347f77315a669067688d2f7efc2130b7b23a9c",
+    "public_sha256": "6e2ce22c08bafc4e58c59bf9c2de7c97a1b079f9951e1e83cad907ddeb911930",
+    "change": "Environment-specific site-packages prefix replaced by <site-packages>; warning text and test results retained."
+  },
+  "other_derivatives": [
+    "ANALYSIS_MANIFEST_PUBLIC.json removes original proxy absolute path and records original manifest SHA256",
+    "INPUT_VERIFICATION.json aliases absolute archive paths and records original report SHA256",
+    "SOURCE_HASH_SUMMARY.json summarizes the private full source manifest without source paths"
+  ]
+}

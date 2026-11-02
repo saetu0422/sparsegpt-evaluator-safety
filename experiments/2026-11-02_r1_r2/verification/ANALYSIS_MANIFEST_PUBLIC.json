@@ -1,0 +1,134 @@
+{
+  "status": "frozen_for_independent_review",
+  "files": [
+    {
+      "path": "analyze.py",
+      "bytes": 16550,
+      "sha256": "322a80ffff54b5ee233fb1fe033a24fcd8712a883f3ce4b98763e37cea99f2fd"
+    },
+    {
+      "path": "test_analysis.py",
+      "bytes": 3555,
+      "sha256": "fc07dc7d2e3543cae74d428d14c28f97af737e94c5e2d5fae6f728ed592b838b"
+    },
+    {
+      "path": "METHODS_FROZEN.md",
+      "bytes": 4620,
+      "sha256": "9a1121d2bb703e188b0fdf5dfd358f7e7704f3943271d1bcf625cd12f001dd64"
+    },
+    {
+      "path": "EXECUTION_NOTES.md",
+      "bytes": 5313,
+      "sha256": "bcc404076990895aa207e782030fcee47642fd68ddc645f3774a26b9e04c1545"
+    },
+    {
+      "path": "FIGURE_CAPTIONS.md",
+      "bytes": 1348,
+      "sha256": "4ed76fa0b202fc22d1bec98737cf6cb8b7376942264730489fe894ed9cd618ae"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 80,
+      "sha256": "ffa8a72b1078305c3e2fef90161b7b7ff6a96e809a7a53db34c4efa4249ed2ba"
+    },
+    {
+      "path": "tests.log",
+      "bytes": 1622,
+      "sha256": "63d23004c0ed8feb6d372d52d2347f77315a669067688d2f7efc2130b7b23a9c"
+    },
+    {
+      "path": "public_replay_parity.json",
+      "bytes": 188,
+      "sha256": "c32558d5cdccd48980a9d6a5e8e9fdfa2cafe5d2c9aab45b77b5ce60d3e0fad6"
+    },
+    {
+      "path": "results/adjacent10.csv",
+      "bytes": 1474,
+      "sha256": "4e9fbbba5a44b35d3a0849826ae00d48257e1a41366c6cfd0e035fe8d6ba0de4"
+    },
+    {
+      "path": "results/agreement.csv",
+      "bytes": 2741,
+      "sha256": "8784691960c1598d601948262ad7f185494cb665606025fce6cdd9afa127539f"
+    },
+    {
+      "path": "results/figure1_rates.pdf",
+      "bytes": 19069,
+      "sha256": "7c5bd26e15b1575b038764743c3520d948251a6e74934ee946991c4169797a67"
+    },
+    {
+      "path": "results/figure1_rates.png",
+      "bytes": 100144,
+      "sha256": "8b1cf82fb64d63838ee564d8a0c308e06f097bcaedc05e37b6d18c34e616c460"
+    },
+    {
+      "path": "results/figure2_r1_quality.pdf",
+      "bytes": 19662,
+      "sha256": "69a30d638bd2882f53d3f45643ab6963b7f7fec6d6f224cf22f6d0a35dcf35df"
+    },
+    {
+      "path": "results/figure2_r1_quality.png",
+      "bytes": 80870,
+      "sha256": "0c4e36284574df2ad2ce6afaf7fdae79a2e9e3f02d5bc4f234c660e58f521446"
+    },
+    {
+      "path": "results/figure3_baseline_deltas.pdf",
+      "bytes": 18199,
+      "sha256": "7b67abdbc2d6bc6bbaf3cca828caaa4d3a71d9f0864fdd2d77619070f01f8777"
+    },
+    {
+      "path": "results/figure3_baseline_deltas.png",
+      "bytes": 53939,
+      "sha256": "c51ca510204bacfbf019bc04e9d9477e70344a3a86bbd1e0ae46469c04617f49"
+    },
+    {
+      "path": "results/logistic_coefficients.csv",
+      "bytes": 846,
+      "sha256": "d39fc84db24df9a4f9b7eb4828ebd265c73177a0cd88a6c381d4b70e916c7a13"
+    },
+    {
+      "path": "results/logistic_oof.csv",
+      "bytes": 8723,
+      "sha256": "06ff50340531555e56ed2c4a9479084f794d6c17af0692732de6fd20ac404ad2"
+    },
+    {
+      "path": "results/r1_SP70_table.csv",
+      "bytes": 1611,
+      "sha256": "3d797e3361492d5a3067bd3260eeee024967f3b0c326f6307d2d694aab72f4be"
+    },
+    {
+      "path": "results/r1_summaries.csv",
+      "bytes": 10188,
+      "sha256": "8886229ef040203de799055daa6b045f82e3ef91bbeab7bf8f6ecdef5584136a"
+    },
+    {
+      "path": "results/r1_tests.csv",
+      "bytes": 2013,
+      "sha256": "e1a19c38374c2652ac9569cfb17980a0d5c60d9ff7a016afe664012ba6a42861"
+    },
+    {
+      "path": "results/r2_baseline12.csv",
+      "bytes": 1783,
+      "sha256": "3cd55423ba4449ea00e675c43212c30098f23dd5faa7a2cef781273dd94d67cb"
+    },
+    {
+      "path": "results/response_metrics_labels.csv",
+      "bytes": 177738,
+      "sha256": "2a40f4b192583d08d47ec5ebb619dad7492b0a419f7792df4a0c1138a73a72bf"
+    },
+    {
+      "path": "results/results.json",
+      "bytes": 140068,
+      "sha256": "9603dd6cbe9fc9cef2d4678b4b9ed8ff2257d4a1092ae8adca2aac5dc035261d"
+    }
+  ],
+  "original_source_proxy": {
+    "sha256": "a9394ee1267b200c864eb17cfbe174e86e6041e3c3e65532f18a753a2e55f9aa",
+    "source_filename": "09_sp70_collapse_analysis.py"
+  },
+  "source_verification_manifest": "input_verification/source_hash_manifest.json",
+  "publication_projection": {
+    "original_sha256": "aa5e962a66d26acb621549a3f6ff9abe4ae45f82379589644562c50c3c9e1813",
+    "change": "Only original_source_proxy.path replaced by source_filename; private original preserved."
+  }
+}

@@ -1,5 +1,7 @@
 # sparsegpt-evaluator-safety
 
+> **2026-11-02 R1/R2 통계 종결:** 최종 standard159의 품질 층화·회귀, FP16 기준 Holm12와 별도 인접 Holm10, κ/PABAK를 재분석했습니다. [결과와 한계](docs/2026-11-02_R1_R2.md) · [텍스트 없는 CPU 재현](experiments/2026-11-02_r1_r2/README.md)
+
 > **2026-11-02 추가 주 실험:** 1,590개 통제·재실행 판정 완료. [결과·한계](docs/2026-11-02_PRIMARY_CONTROL.md) · [재현 코드](experiments/2026-11-02_primary_control/README.md)
 
 > **2026-11-02:** copyright80 저장 응답 560개를 CPU hash-check로 평가하고 contextual81 생성 출처를 재감사했습니다. 신규 생성·GPU·LLM 판정 없음. [결과](results/2026-11-02_copyright80/README.md) · [방법](docs/2026-11-02_METHODS.md) · [contextual 감사](experiments/2026-11-02_contextual81/README.md)
@@ -11,6 +13,14 @@ SparseGPT 저장 응답의 안전성 평가자 차이를 조사한 **탐색적 �
 ## 날짜별 실험 기록 / Daily research log
 
 날짜가 확인된 실제 수행 내용을 기록합니다. **모델 판정 실행, 코드 준비, 통계·품질 분석, 준비도 감사는 구분**하며, 계획만 있는 작업을 완료로 표시하지 않습니다. 날짜 근거가 없는 이전 준비·분석 단계는 임의로 날짜를 붙이지 않고 [단계별 연구 기록](docs/RESEARCH_HISTORY.md)에 남깁니다.
+
+### 2026-11-02 — 최종 standard159 R1/R2 통계 분석
+
+- **범위:** 기존7조건×159응답=1113개·최종라벨2226개 CPU 재분석. 원래base/320과 구분하고 오늘 통제/재실행 라벨은 중복표본으로 넣지 않았습니다. 신규생성·GPU·LLM·인간평가는 없습니다.
+- **R1:** SP70 D122/A37. 반복·지배도는 보정 전 탐색적 차이가 있지만 길이와collapse Fisher는 비유의. OOF AUC=.623837이고 모든 slope95CI는0을 포함합니다. 강한V1/V2는 확정하지 않습니다.
+- **R2:** 기준선Holm12 최초유의조건은 양쪽모두SP50. HB SP70 vs FP16은 비유의입니다. 별도인접Holm10에서 SP60→70은 LG+57.862pp/HB−10.692pp로 반대방향이 유지됩니다. 이전5조건baseline Holm10 기록은 보존합니다.
+- **검증:** 독립429개수치대조·20개동률U·14테스트, 공개수치행의 전체과학JSON/CSV 재현 통과. BFGS precision-loss 경고·빈D그룹·κ미정의재표집을 숨기지 않습니다.
+- **자료:** [요구 대응과 결과](docs/2026-11-02_R1_R2.md) · [public CPU package](experiments/2026-11-02_r1_r2/README.md). 이새폴더에는canonical-derived ID·라벨·수치행을 공개하지만 원문prompt/response·credentials·private Drive IDs는 포함하지 않습니다.
 
 ### 2026-11-02 — 추가 주 실험: 단어 순서·문맥과 평가자 불일치
 
@@ -109,6 +119,8 @@ See [research history](docs/RESEARCH_HISTORY.md), [methods and architecture](doc
 - `third_party/`: the upstream notice for the attributed HarmBench template.
 
 ## Reproduce safely
+
+**공개 수치 재현 추가:** `experiments/2026-11-02_r1_r2/`에는 응답별 canonical-derived ID, SHA256, 이진 라벨과 수치 특징을 포함합니다. 아래의 오래된 집계 전용 설명은 당시 폴더의 범위이며, 이 새 패키지의 수치 결과는 비공개 원문 없이 CPU로 재현할 수 있습니다. 원문 특징추출 및 과거 생성·판정의 전체 실행은 여전히 별개입니다.
 
 Start with the **offline synthetic tests** and aggregate tables; see the [October29 reproduction instructions](docs/REPRODUCIBILITY.md), [October30 continuation code](experiments/2026-10-30_intermediate159/README.md), and [quality code](experiments/2026-10-30_quality/README.md). These tests do not need a GPU, a token, a Drive account or private benchmark text.
 

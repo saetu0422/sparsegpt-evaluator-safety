@@ -1,0 +1,13 @@
+{
+  "schema": "source-hash-summary-v1",
+  "source_hash_manifest_sha256": "dbe1121b8df0a06ddf87f35b2f52fd28d5ccc68c86936fbe831cc465d03d0c7d",
+  "source_hash_manifest_entries": 7064,
+  "source_hash_manifest_paths_withheld": true,
+  "original_response_zip_sha256": "dd8e84fe8a6e1d4d6f460ab5cb27f1f4650f90f162f99450e8766a5c8254d482",
+  "original_baseline636_zip_sha256": "c97df90714f89e809343c434c474b5a5a15813a0de15e082330353ae3c955957",
+  "public_metrics_sha256": "2a40f4b192583d08d47ec5ebb619dad7492b0a419f7792df4a0c1138a73a72bf",
+  "private_input_sha256": "ef8bb4a991950618edadda64f35147075900739250a4e5402558b369a2974bfe",
+  "response_rows": 1113,
+  "judge_labels": 2226,
+  "source_boundary": "Private source and backend files are not redistributed. Source row/content bindings were verified. Public metrics enable numeric replay, not raw-text feature extraction or historical model inference."
+}

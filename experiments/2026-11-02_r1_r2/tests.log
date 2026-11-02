@@ -1,0 +1,21 @@
+test_auc_ties (test_analysis.AnalysisTests.test_auc_ties) ... ok
+test_bootstrap_seed (test_analysis.AnalysisTests.test_bootstrap_seed) ... ok
+test_collapse_boundary (test_analysis.AnalysisTests.test_collapse_boundary) ... ok
+test_empty (test_analysis.AnalysisTests.test_empty) ... ok
+test_holm (test_analysis.AnalysisTests.test_holm) ... ok
+test_logistic_reference (test_analysis.AnalysisTests.test_logistic_reference) ... <site-packages>/sklearn/linear_model/_logistic.py:1135: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', and C=np.inf instead of penalty=None.
+  warnings.warn(
+ok
+test_missing_rejected (test_analysis.AnalysisTests.test_missing_rejected) ... ok
+test_no_discordant_p (test_analysis.AnalysisTests.test_no_discordant_p) ... ok
+test_rank_deficiency (test_analysis.AnalysisTests.test_rank_deficiency) ... ok
+test_separated_model_invalid (test_analysis.AnalysisTests.test_separated_model_invalid) ... ok
+test_separation (test_analysis.AnalysisTests.test_separation) ... ok
+test_under_six_override (test_analysis.AnalysisTests.test_under_six_override) ... ok
+test_whitespace_punctuation_case (test_analysis.AnalysisTests.test_whitespace_punctuation_case) ... ok
+test_wilson (test_analysis.AnalysisTests.test_wilson) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.033s
+
+OK

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "Final standard159 R1/R2 source binding, methods, numerical results and analysis release files. Not manuscript approval or publication.",
+  "verified_at_utc": "2026-11-02T07:56:08.148599+00:00",
+  "analysis_manifest_sha256": "aa5e962a66d26acb621549a3f6ff9abe4ae45f82379589644562c50c3c9e1813",
+  "analyzer_sha256": "322a80ffff54b5ee233fb1fe033a24fcd8712a883f3ce4b98763e37cea99f2fd",
+  "results_sha256": "9603dd6cbe9fc9cef2d4678b4b9ed8ff2257d4a1092ae8adca2aac5dc035261d",
+  "frozen_methods_sha256": "9a1121d2bb703e188b0fdf5dfd358f7e7704f3943271d1bcf625cd12f001dd64",
+  "manifest_files_verified": 24,
+  "independent_numeric_comparisons": 429,
+  "manual_pairwise_tie_U_checks": 20,
+  "unit_tests_passed": 14,
+  "source_labels_verified": 2226,
+  "responses_verified": 1113,
+  "source_export_members_rerun": 7060,
+  "bootstrap_replicates_replayed": 20000,
+  "public_replay_scientific_sections_exact": true,
+  "public_replay_all_csv_byte_identical": true,
+  "figure_visual_qa": "PASS three PNGs",
+  "independent_solver": "score-equation root full+fivefold, converged; original BFGS precision-loss flags explicitly retained",
+  "oof_auc": 0.6238369517058041,
+  "limitations": [
+    "Current standard159/Instruct/new-standard judge protocol, not historical320/base reproduction.",
+    "Canonical CSV row/content-derived IDs, not native source IDs.",
+    "Stored hash/protocol verification, not tokenizer/model inference replay or historical checkpoint identity proof.",
+    "R1 exploratory unadjusted tests, sparse cells, single generation seed, no causal inference and no automatic V1/V2.",
+    "Manuscript narrative/professor decision and GitHub/report delivery not certified by this analysis receipt."
+  ],
+  "reviewer_files": {
+    "AUDIT_PLAN.md": "3bc2e9bd2b58ac959f3bc659bbbcbc64ccdebc82f99af09a9a85f438100ec0e4",
+    "independent.py": "3b645037073bbbea4151849ae602db0e14f42555aee081df97c13e5737ecbec5",
+    "compare.py": "3db61d1cda1cf5fc9d4c604a6924bf9213c3083233eee6ec163d9c17b488986c",
+    "NUMERIC_REVIEW.json": "3be6b540f9588e9e3b2d4aefba317d96af4273d3d3010de08f879f43f735f11a",
+    "REVIEW_NOTES.txt": "16d0e51f2f725b2c870cfbe4f2bb4f5145a6bf6974f85405bcc85b817b3682d0",
+    "final_tests.log": "2818529e3041fa971e75a722d05735601dd135ef4254d4104c73644879330917"
+  }
+}

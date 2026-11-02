@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "scientific_json_exact_equal_excluding_input_metadata": true,
+  "omitted_metadata": [
+    "input_mode",
+    "input_sha256"
+  ],
+  "bootstrap_replicates": 20000
+}
