@@ -1,0 +1,22 @@
+{
+  "HB_full_input_max": 512,
+  "HB_response_token_range": [
+    142,
+    156
+  ],
+  "LG_full_input_max": 366,
+  "LG_response_token_range": [
+    126,
+    134
+  ],
+  "all159_candidate_attempts": 0,
+  "all_prespecified_ids_and_cells_present": true,
+  "all_response_pairs_within5percent": true,
+  "new_labels_seen": 0,
+  "package_pins": "PASS after exact transformers5.20.2 repair",
+  "pip_check": "exit1 solely missingjedi/IPython; scopedwaiver, notglobalPASS",
+  "synthetic_full_input_preflight_count": 1272,
+  "task_bytes_unchanged": true,
+  "tokenizer_backend_limitation": "HB andLG requested use_fast True/False both resolved is_fast True. Configuration parity, not independent algorithm verification.",
+  "weights_loaded": false
+}

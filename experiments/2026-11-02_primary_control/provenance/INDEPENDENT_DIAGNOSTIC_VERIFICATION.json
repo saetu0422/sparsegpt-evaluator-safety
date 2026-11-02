@@ -1,0 +1,28 @@
+{
+  "status": "PRESPECIFIED_DIAGNOSTICS_INDEPENDENTLY_MATCH",
+  "utc": "2026-11-02T03:25:36.805589+00:00",
+  "neutral_disagreement_change": {
+    "mean": 0.06918238993710692,
+    "ci": [
+      -0.018867924528301886,
+      0.15723270440251572
+    ]
+  },
+  "context_H_minus_N_disagreement_change": {
+    "mean": 0.41509433962264153,
+    "ci": [
+      0.3018867924528302,
+      0.5283018867924528
+    ]
+  },
+  "raw_replay_exact_matches": {
+    "HB": 159,
+    "LG": 159
+  },
+  "observed_loaded_config_commit": {
+    "HB": null,
+    "LG": null
+  },
+  "secondary_p_values_added": false,
+  "limits": "Descriptive secondary contrasts only; context substitution changes more than harmful intent, including length."
+}

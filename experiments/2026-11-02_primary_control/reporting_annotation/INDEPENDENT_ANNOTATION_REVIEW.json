@@ -1,0 +1,10 @@
+{
+  "status": "REPORTING_ANNOTATION_INDEPENDENTLY_VERIFIED",
+  "utc": "2026-11-02T03:28:13.830950+00:00",
+  "annotation_sha256": "ac3d45865cf75c824e69e8d3f499aa33a2aae0b1cfd79cae742517d67b361a77",
+  "tests_independently_passed": 5,
+  "original_analysis_sha256": "c7812d860d4362b7f237d16633d550d967997a7fcec2c6fb84e5d740979dbf72",
+  "original_analysis_source_sha256": "7eb577ce2f5e016d29a34510f9399dce3704ce4a38b40509b796931d2d5a6362",
+  "finding": "Frozen true boolean means upperCI>=10pp, not a correct three-way relation. Entire primary interval lies above10pp; annotation correctly distinguishes below/crossing/above with conservative boundary handling.",
+  "estimates_p_values_intervals_or_hypotheses_changed": false
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "public-analysis-derivative-integrity-v1",
+  "original_freeze_sha256": "c4d75837cfd80a5195a70b4851fe29e89c43cf6e788a7f8f0e97f2d0bb327875",
+  "scientific_analysis_code_unchanged": true,
+  "changes": "Local path replacement in docs/inventory; test private historical protocol path supplied explicitly through environment, otherwise integration test skipped. Not a new prospective freeze.",
+  "files": {
+    "ANALYSIS_PLAN.md": "948ea46a1750c3a56ca467ea5407b55abe5a3e9bb0a10d2a264803a10b4e799e",
+    "analysis_config.json": "cc26bf06a792e44274d436b475d451ed1fbb664a7c3272bfe589ae5cdd40fbd3",
+    "analyze.py": "7eb577ce2f5e016d29a34510f9399dce3704ce4a38b40509b796931d2d5a6362",
+    "frozen_parsers.py": "6616ea2e9fd27ced56a6e00bc73340bfa6e92cb0c6ee5a213382b6732bd0cbc8",
+    "historical_inventory.json": "ab9f2e2f9c9eae550f5c181b92ce9781b25e7a597afff3c47c11b0d2b6130276",
+    "synthetic_tests.log": "ac617f353b88e18af885a81fe5ccf952ff2c917e5e1b26670999eb869e067b75",
+    "test_analysis.py": "c9a3d49904eace18bf0b293dff413f1f9b0f6ad23273b877a9353f0914cca4aa"
+  }
+}

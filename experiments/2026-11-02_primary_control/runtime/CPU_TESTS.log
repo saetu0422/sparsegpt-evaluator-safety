@@ -1,0 +1,32 @@
+test_active_config_source_mismatch_stops_before_storage (test_operational_config.ConfigTests.test_active_config_source_mismatch_stops_before_storage) ... ok
+test_config_cannot_reset (test_operational_config.ConfigTests.test_config_cannot_reset) ... ok
+test_immutable (test_operational_config.ConfigTests.test_immutable) ... ok
+test_invalid_path (test_operational_config.ConfigTests.test_invalid_path) ... ok
+test_scratch_not_remote (test_operational_config.ConfigTests.test_scratch_not_remote) ... ok
+test_timezone_required (test_operational_config.ConfigTests.test_timezone_required) ... ok
+test_twohour_cap (test_operational_config.ConfigTests.test_twohour_cap) ... ok
+test_unknown_budget (test_operational_config.ConfigTests.test_unknown_budget) ... ok
+test_valid (test_operational_config.ConfigTests.test_valid) ... ok
+test_fast_slow_fail (test_runner.FunctionalPreflight.test_fast_slow_fail) ... ok
+test_length_fail (test_runner.FunctionalPreflight.test_length_fail) ... ok
+test_success (test_runner.FunctionalPreflight.test_success) ... ok
+test_truncation_fail (test_runner.FunctionalPreflight.test_truncation_fail) ... ok
+test_backend_archive_manifest (test_runner.StageExport.test_backend_archive_manifest) ... ok
+test_abandoned_lock_retained (test_runner.Tests.test_abandoned_lock_retained) ... ok
+test_atomic_identical_conflict (test_runner.Tests.test_atomic_identical_conflict) ... ok
+test_budget_good (test_runner.Tests.test_budget_good) ... ok
+test_budget_reserve (test_runner.Tests.test_budget_reserve) ... ok
+test_budget_stale_future (test_runner.Tests.test_budget_stale_future) ... ok
+test_cutoff_and_lease (test_runner.Tests.test_cutoff_and_lease) ... ok
+test_fresh_run_configured_cutoff (test_runner.Tests.test_fresh_run_configured_cutoff) ... ok
+test_immutable_record_digest (test_runner.Tests.test_immutable_record_digest) ... ok
+test_invalid_not_safe (test_runner.Tests.test_invalid_not_safe) ... ok
+test_preflight_gate (test_runner.Tests.test_preflight_gate) ... ok
+test_rate_unknown_stops (test_runner.Tests.test_rate_unknown_stops) ... ok
+test_secret_refused_local_write (test_runner.Tests.test_secret_refused_local_write) ... ok
+test_symlink (test_runner.Tests.test_symlink) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.031s
+
+OK

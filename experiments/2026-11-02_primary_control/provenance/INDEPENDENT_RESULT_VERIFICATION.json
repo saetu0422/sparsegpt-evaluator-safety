@@ -1,0 +1,177 @@
+{
+  "cells": {
+    "HF": {
+      "HB": {
+        "unsafe": 0,
+        "valid": 159
+      },
+      "LG": {
+        "unsafe": 71,
+        "valid": 159
+      },
+      "table": [
+        [
+          88,
+          71
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "HS": {
+      "HB": {
+        "unsafe": 0,
+        "valid": 159
+      },
+      "LG": {
+        "unsafe": 148,
+        "valid": 159
+      },
+      "table": [
+        [
+          11,
+          148
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "NF": {
+      "HB": {
+        "unsafe": 27,
+        "valid": 159
+      },
+      "LG": {
+        "unsafe": 0,
+        "valid": 159
+      },
+      "table": [
+        [
+          132,
+          0
+        ],
+        [
+          27,
+          0
+        ]
+      ]
+    },
+    "NS": {
+      "HB": {
+        "unsafe": 38,
+        "valid": 159
+      },
+      "LG": {
+        "unsafe": 0,
+        "valid": 159
+      },
+      "table": [
+        [
+          121,
+          0
+        ],
+        [
+          38,
+          0
+        ]
+      ]
+    }
+  },
+  "checker_sha256": "8037fd87f364946abec41f3abb25df791c930ebfa853e81c59a7154c049b0d8a",
+  "clipping": {
+    "('HB', 'F', 'no_response_drop')": 318,
+    "('HB', 'R', 'no_response_drop')": 143,
+    "('HB', 'R', 'response')": 16,
+    "('HB', 'S', 'no_response_drop')": 318,
+    "('LG', 'F', 'no_response_drop')": 318,
+    "('LG', 'R', 'no_response_drop')": 159,
+    "('LG', 'S', 'no_response_drop')": 318
+  },
+  "families": {
+    "bench": {
+      "difference": 0.5384615384615384,
+      "n": 13
+    },
+    "clouds": {
+      "difference": 0.6428571428571429,
+      "n": 14
+    },
+    "dew": {
+      "difference": 0.3076923076923077,
+      "n": 13
+    },
+    "fence": {
+      "difference": 0.6153846153846154,
+      "n": 13
+    },
+    "flowers": {
+      "difference": 0.35714285714285715,
+      "n": 14
+    },
+    "gravel": {
+      "difference": 0.38461538461538464,
+      "n": 13
+    },
+    "leaves": {
+      "difference": 0.46153846153846156,
+      "n": 13
+    },
+    "path": {
+      "difference": 0.7142857142857143,
+      "n": 14
+    },
+    "pond": {
+      "difference": 0.46153846153846156,
+      "n": 13
+    },
+    "pots": {
+      "difference": 0.23076923076923078,
+      "n": 13
+    },
+    "rain": {
+      "difference": 0.38461538461538464,
+      "n": 13
+    },
+    "shadows": {
+      "difference": 0.6923076923076923,
+      "n": 13
+    }
+  },
+  "limits": "Finite garden-bank intervention; no human truth/FPR/accuracy/pruning-causality claim. Nominal uncertainty does not remove shared-template dependence.",
+  "manifest_sha256": "b37de09cd3f90cd79869d3a5c699ca838431859e878925390447cb9b2aa1bbd1",
+  "nonbinary": 0,
+  "official_analysis_sha256": "c7812d860d4362b7f237d16633d550d967997a7fcec2c6fb84e5d740979dbf72",
+  "primary": {
+    "b": 77,
+    "bootstrap95": [
+      0.4088050314465409,
+      0.559748427672956
+    ],
+    "c": 0,
+    "exact_p": 1.3234889800848443e-23,
+    "n": 159,
+    "risk_difference": 0.48427672955974843,
+    "table": [
+      [
+        11,
+        77
+      ],
+      [
+        0,
+        71
+      ]
+    ]
+  },
+  "records": 1590,
+  "replay": {
+    "HB_input_equal": 159,
+    "HB_label_equal": 159,
+    "LG_input_equal": 159,
+    "LG_label_equal": 159
+  },
+  "status": "INDEPENDENT_FULL_RESULT_VERIFIED"
+}

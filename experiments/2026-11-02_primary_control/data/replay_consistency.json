@@ -1,0 +1,125 @@
+{
+  "checks": {
+    "HB": {
+      "input_token_hash_matches": {
+        "false": 0,
+        "true": 159,
+        "unavailable": 0
+      },
+      "label_matches": {
+        "false": 0,
+        "true": 159,
+        "unavailable": 0
+      },
+      "parser_version_matches": {
+        "false": 0,
+        "true": 159,
+        "unavailable": 0
+      },
+      "protocol_document_hash_matches": {
+        "false": 159,
+        "true": 0,
+        "unavailable": 0
+      },
+      "raw_matches": {
+        "false": 0,
+        "true": 159,
+        "unavailable": 0
+      }
+    },
+    "LG": {
+      "input_token_hash_matches": {
+        "false": 0,
+        "true": 159,
+        "unavailable": 0
+      },
+      "label_matches": {
+        "false": 0,
+        "true": 159,
+        "unavailable": 0
+      },
+      "parser_version_matches": {
+        "false": 0,
+        "true": 159,
+        "unavailable": 0
+      },
+      "protocol_document_hash_matches": {
+        "false": 159,
+        "true": 0,
+        "unavailable": 0
+      },
+      "raw_matches": {
+        "false": 0,
+        "true": 159,
+        "unavailable": 0
+      }
+    }
+  },
+  "note": "Historical raw636 labels are a replay comparator, not ground truth. Whole-document hash inequality alone is not scientific drift.",
+  "scientific_protocol_comparison": {
+    "HB": {
+      "historical_environment": {
+        "cuda": "13.0",
+        "device": "NVIDIA A100-SXM4-40GB",
+        "packages": {
+          "accelerate": "1.15.0",
+          "torch": "2.11.0+cu130",
+          "transformers": "5.20.2"
+        },
+        "precision": "fp16",
+        "total_memory": 42405855232
+      },
+      "new_environment": {
+        "cuda": "13.0",
+        "device": "NVIDIA A100-SXM4-40GB",
+        "packages": {
+          "accelerate": "1.15.0",
+          "torch": "2.11.0+cu130",
+          "transformers": "5.20.2"
+        },
+        "precision": "fp16",
+        "total_memory": 42405855232
+      },
+      "scientific_fields_match": {
+        "model_id": true,
+        "model_revision": true,
+        "parser_code_sha256": true,
+        "settings": true,
+        "template_sha256": true,
+        "tokenizer_revision": true
+      }
+    },
+    "LG": {
+      "historical_environment": {
+        "cuda": "13.0",
+        "device": "NVIDIA A100-SXM4-40GB",
+        "packages": {
+          "accelerate": "1.15.0",
+          "torch": "2.11.0+cu130",
+          "transformers": "5.20.2"
+        },
+        "precision": "fp16",
+        "total_memory": 42405855232
+      },
+      "new_environment": {
+        "cuda": "13.0",
+        "device": "NVIDIA A100-SXM4-40GB",
+        "packages": {
+          "accelerate": "1.15.0",
+          "torch": "2.11.0+cu130",
+          "transformers": "5.20.2"
+        },
+        "precision": "fp16",
+        "total_memory": 42405855232
+      },
+      "scientific_fields_match": {
+        "model_id": true,
+        "model_revision": true,
+        "parser_code_sha256": true,
+        "settings": true,
+        "template_sha256": true,
+        "tokenizer_revision": true
+      }
+    }
+  }
+}

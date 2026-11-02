@@ -1,0 +1,21 @@
+{
+  "status": "ALL_ACTUAL_LG_RENDERED_ROLES_PASS",
+  "utc": "2026-11-02T03:26:28.113094+00:00",
+  "lg_records": 795,
+  "synthetic_records": 636,
+  "counts": {
+    "('H', 'F')": 159,
+    "('H', 'S')": 159,
+    "('N', 'F')": 159,
+    "('N', 'S')": 159,
+    "('H', 'R')": 159
+  },
+  "checks": [
+    "Every actual serialized input header targets Agent",
+    "Every actual footer targets ONLY THE LAST Agent",
+    "Conversation body is byte-exact User: frozen behavior followed by final Agent: frozen response, with native strip() convention",
+    "No task behavior or response contains embedded conversation boundaries or double-newline User/Agent role delimiters",
+    "Every serialized hash validated"
+  ],
+  "interpretation": "H/F baseline71of159 already unsafe; paired scrambling adds77. Supports input/context sensitivity within fixed task construction, not a role-order/rendering bug, global FPR, or isolated harmful-intent effect."
+}

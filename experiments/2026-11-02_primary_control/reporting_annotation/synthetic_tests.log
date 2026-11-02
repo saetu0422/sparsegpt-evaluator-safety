@@ -1,0 +1,10 @@
+test_above (test_reference_interpretation.Tests.test_above) ... ok
+test_below (test_reference_interpretation.Tests.test_below) ... ok
+test_crossing (test_reference_interpretation.Tests.test_crossing) ... ok
+test_missing_and_invalid (test_reference_interpretation.Tests.test_missing_and_invalid) ... ok
+test_touching (test_reference_interpretation.Tests.test_touching) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK

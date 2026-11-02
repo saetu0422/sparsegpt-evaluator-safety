@@ -1,0 +1,89 @@
+{
+  "analysis_freeze": {
+    "sha256": "c4d75837cfd80a5195a70b4851fe29e89c43cf6e788a7f8f0e97f2d0bb327875"
+  },
+  "analysis_source": {
+    "sha256": "7eb577ce2f5e016d29a34510f9399dce3704ce4a38b40509b796931d2d5a6362"
+  },
+  "annotation_review": {
+    "sha256": "5f2b1901008b36a8ba9ab0c335c5daab8c666ab715a085333aa24d5c46231040"
+  },
+  "diagnostic_review": {
+    "sha256": "ad02cf0bb8f46707416d9b82e430648752aa78efe3c4c9be42f55bad48d69f75"
+  },
+  "frozen_execution_manifest": {
+    "not_included_reason": "Contains private storage destination identifier",
+    "sha256": "b37de09cd3f90cd79869d3a5c699ca838431859e878925390447cb9b2aa1bbd1"
+  },
+  "frozen_tasks": {
+    "not_included_reason": "Contains benchmark prompts and saved responses",
+    "sha256": "6203d76d6376091cf2b68af0bb57f353629a92509f1a06241b7b3520c16d06da"
+  },
+  "historical_inventory": {
+    "sha256": "92c95b10c3ada3dba6312a197310ba5be814521cd05095bb9186bc7844eb5bf8"
+  },
+  "independent_review": {
+    "sha256": "6b31909c15afeb85f3cc258370deedae13101e1cacd0bd27e132fd9ef78136cb"
+  },
+  "interpretation_annotation": {
+    "sha256": "ac3d45865cf75c824e69e8d3f499aa33a2aae0b1cfd79cae742517d67b361a77"
+  },
+  "role_render_review": {
+    "sha256": "d3680dd3a4bd4af658dab3aaed2d08be1161f2a7e1265dda9c7f34e14db3406a"
+  },
+  "scientific_protocol": {
+    "public_copy": "frozen_source/PROTOCOL_V1_PUBLIC.md",
+    "redactions": [
+      "Account email replaced",
+      "Private approval message identifier replaced",
+      "Private local historical-run path replaced by placeholder",
+      "Private starting account credit balance omitted"
+    ],
+    "scientific_methods_changed": false,
+    "sha256": "57c70d64387af5f47dfd887cc9ec6cadf177aa925bac196f430c064f86172e37"
+  },
+  "shutdown_receipt": {
+    "sha256": "39fb09b737e5cf16fbf53d33c23c4b8688a1c616808063f8442334191eee2941"
+  },
+  "verified_analysis": {
+    "not_included_reason": "Contains original benchmark IDs and detailed per-record provenance; public aggregates and opaque rows provided",
+    "sha256": "c7812d860d4362b7f237d16633d550d967997a7fcec2c6fb84e5d740979dbf72"
+  },
+  "public_derivative": {
+    "original_private_repro_zip_sha256": "7de4917a4764ca975a24efd6b16c3300f3baf4e00a150f3311194da18c12ec65",
+    "changes": [
+      {
+        "path": "frozen_source/ANALYSIS_PLAN.md",
+        "original_sha256": "6946eb346cdba77b5f1ab128565c6f5ac773ba5b4de8335530f3e34157f7d8e8",
+        "public_sha256": "948ea46a1750c3a56ca467ea5407b55abe5a3e9bb0a10d2a264803a10b4e799e"
+      },
+      {
+        "path": "frozen_source/PROTOCOL_V1_PUBLIC.md",
+        "original_sha256": "e2ceeaecdaaef77e0ee6e6bcfd76f8d404d2d56fa2456d00c2fa68269bf4df0f",
+        "public_sha256": "6351ae7329df088be820669ee7233d3bae90179d7ed7f6471daa799657717257"
+      },
+      {
+        "path": "frozen_source/historical_inventory.json",
+        "original_sha256": "92c95b10c3ada3dba6312a197310ba5be814521cd05095bb9186bc7844eb5bf8",
+        "public_sha256": "ab9f2e2f9c9eae550f5c181b92ce9781b25e7a597afff3c47c11b0d2b6130276"
+      },
+      {
+        "path": "frozen_source/test_analysis.py",
+        "original_sha256": "7cd276622ca07baae4862ab1fd724cbff5c3933d3dbf832af30cbc6bb23cece1",
+        "public_sha256": "c9a3d49904eace18bf0b293dff413f1f9b0f6ad23273b877a9353f0914cca4aa"
+      },
+      {
+        "path": "reproduce_summary.py",
+        "original_sha256": "8b311cada9467f55f9bf285808e32d1d91259e1c106ecb88b1d55ee27de43110",
+        "public_sha256": "d6cc87708cc48b295d0af891927512e581a1f19c558c3c5a43430095ae6110e6"
+      }
+    ],
+    "original_frozen_source_preserved_privately": true,
+    "analysis_math_source_unchanged": true,
+    "original_freeze_metadata": "provenance/ORIGINAL_ANALYSIS_FREEZE.json",
+    "additional_redactions": [
+      "Account remaining credit balances omitted; qualified task usage only",
+      "Local paths omitted from reporting annotation; original hash retained"
+    ]
+  }
+}

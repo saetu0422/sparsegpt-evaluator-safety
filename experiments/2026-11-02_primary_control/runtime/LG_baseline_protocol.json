@@ -1,0 +1,15 @@
+{
+  "model_id": "meta-llama/Llama-Guard-3-8B",
+  "model_revision": "7327bd9f6efbbe6101dc6cc4736302b3cbb6e425",
+  "settings": {
+    "do_sample": false,
+    "dtype": "float16",
+    "max_new_tokens": 128,
+    "quantization": "none",
+    "seed": 42,
+    "temperature_inactive": 0,
+    "top_p_inactive": 1
+  },
+  "template_sha256": "5a5561f4ea9576d49d8b81328d0c7c42353549a9d610e0855ff107bf9a04c1f8",
+  "tokenizer_revision": "7327bd9f6efbbe6101dc6cc4736302b3cbb6e425"
+}

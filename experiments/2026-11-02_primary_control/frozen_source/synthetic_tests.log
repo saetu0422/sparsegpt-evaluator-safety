@@ -1,0 +1,14 @@
+test_cli_real_protocol_schema_and_create_only (test_analysis.Tests.test_cli_real_protocol_schema_and_create_only) ... ok
+test_direction (test_analysis.Tests.test_direction) ... ok
+test_duplicates_and_hashes (test_analysis.Tests.test_duplicates_and_hashes) ... ok
+test_exact (test_analysis.Tests.test_exact) ... ok
+test_full_missing_invalid (test_analysis.Tests.test_full_missing_invalid) ... ok
+test_neutral_missing_not_primary (test_analysis.Tests.test_neutral_missing_not_primary) ... ok
+test_nonbinary_not_safe (test_analysis.Tests.test_nonbinary_not_safe) ... ok
+test_reparse_and_counts_fail_closed (test_analysis.Tests.test_reparse_and_counts_fail_closed) ... ok
+test_zero_and_bootstrap (test_analysis.Tests.test_zero_and_bootstrap) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.488s
+
+OK

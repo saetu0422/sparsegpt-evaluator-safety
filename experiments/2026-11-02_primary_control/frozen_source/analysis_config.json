@@ -1,0 +1,19 @@
+{
+  "alpha": 0.05,
+  "bootstrap_bit_generator": "PCG64",
+  "bootstrap_cluster": "canonical_sorted_BehaviorID",
+  "bootstrap_quantile": "linear",
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 20261102,
+  "contrast": "S_minus_F_HB_LG_disagreement",
+  "diagnostics": "descriptive_no_secondary_p_values",
+  "factorial_calls": 1272,
+  "material_effect_reference": 0.1,
+  "missing_primary_policy": "no_p_value_nonconfirmatory_descriptive_only",
+  "numpy_tested": "2.3.5",
+  "planned_clusters": 159,
+  "primary_context": "H",
+  "replay_calls": 318,
+  "schema": "primary-control-analysis-config-v1",
+  "test": "two_sided_exact_McNemar"
+}

@@ -1,0 +1,18 @@
+{
+  "amendment": "Reference finalized protocol; no code, endpoint, test, or statistical changes; no new outputs viewed.",
+  "files": {
+    "ANALYSIS_PLAN.md": "6946eb346cdba77b5f1ab128565c6f5ac773ba5b4de8335530f3e34157f7d8e8",
+    "analysis_config.json": "cc26bf06a792e44274d436b475d451ed1fbb664a7c3272bfe589ae5cdd40fbd3",
+    "analyze.py": "7eb577ce2f5e016d29a34510f9399dce3704ce4a38b40509b796931d2d5a6362",
+    "frozen_parsers.py": "6616ea2e9fd27ced56a6e00bc73340bfa6e92cb0c6ee5a213382b6732bd0cbc8",
+    "historical_inventory.json": "92c95b10c3ada3dba6312a197310ba5be814521cd05095bb9186bc7844eb5bf8",
+    "synthetic_tests.log": "ac617f353b88e18af885a81fe5ccf952ff2c917e5e1b26670999eb869e067b75",
+    "test_analysis.py": "7cd276622ca07baae4862ab1fd724cbff5c3933d3dbf832af30cbc6bb23cece1"
+  },
+  "new_inference_viewed": false,
+  "protocol_file": "../design/PROTOCOL_V1.md",
+  "protocol_sha256": "57c70d64387af5f47dfd887cc9ec6cadf177aa925bac196f430c064f86172e37",
+  "schema": "blinded-analysis-freeze-v3",
+  "supersedes_sha256": "3578628919a50811c573515ca7e735c5de187cd3fc79007cb0edd7416bc8cf5f",
+  "tests": "9 synthetic tests PASS"
+}

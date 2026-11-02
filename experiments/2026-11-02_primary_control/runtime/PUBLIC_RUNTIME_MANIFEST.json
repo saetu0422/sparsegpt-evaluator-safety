@@ -1,0 +1,22 @@
+{
+  "executed_reference_sha256": "2a23efdacce1507e7bbe5599d2730a42fe5505501a2ce04b476553fc7013aa96",
+  "files": {
+    "CPU_PARITY.json": "c0b53ce526eef3c08d9a838baa639befb196323aac1928952bbbb3210e34c691",
+    "CPU_TESTS.log": "b17ceaf22d1c8d2557eec458ea3b838f836644189482da06332eb221c1ab4315",
+    "HB_baseline_protocol.json": "1f8aaa2585d0e08680fa3096cf0eee816461713938e5fd3a63a8252e159134ab",
+    "HB_standard_template.txt": "6e40c2f76a74aa2dc38d83b557220017311e29c249d938a256c3f0a2d87f0cac",
+    "LG_baseline_protocol.json": "620dcff9e896bdde87b17426141433c6925fbf5e46d5cd3af2f29e12279d39e6",
+    "README.md": "0107b7b909758c5f89c22ae514e3eab28d4ceeae881537e5a02abb5d1d084ee6",
+    "check_reference_parity.py": "7d8ff8f1d064482c7d972ff63b9f35381a56c12ea8526707b690e5d82f683d52",
+    "control_runner.py": "21b485fa83a4cda1f287d5e8a48e390f600d8e051a2ccf1ed428ae350c42ce5f",
+    "operational_config.py": "2bb50e7373020dd584d2128261efee8c6df66c760a7418fff9770d032d261156",
+    "research_parsers.py": "6616ea2e9fd27ced56a6e00bc73340bfa6e92cb0c6ee5a213382b6732bd0cbc8",
+    "runner_cli.py": "d42a5d8bf2c9ee6f94c8c8c204f74f19bc0f100a5c1322a1ac9ab0f29357cdba",
+    "storage.py": "d90565813d3f7b7297bd3ef1ec30dbf26279806709c9b02bc8f22e85f8298bdd",
+    "test_operational_config.py": "2a5dfb8cabda6811795f7744a027a95044cf1042c61fe1a295a5203639d7faee",
+    "test_runner.py": "3971acc852e991d59ccc4e8b07be8cdf10a97cba9f6bb35f3a3c3233b79dfa90"
+  },
+  "private_inputs_included": false,
+  "schema": "public-runtime-derivative-v1",
+  "validation": "27 CPU synthetic tests + 18 mocked rendering/parser parity checks + AST parity; no fresh GPU/tokenizer/model/auth calls"
+}

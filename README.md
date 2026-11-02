@@ -1,5 +1,7 @@
 # sparsegpt-evaluator-safety
 
+> **2026-11-02 추가 주 실험:** 1,590개 통제·재실행 판정 완료. [결과·한계](docs/2026-11-02_PRIMARY_CONTROL.md) · [재현 코드](experiments/2026-11-02_primary_control/README.md)
+
 > **2026-11-02:** copyright80 저장 응답 560개를 CPU hash-check로 평가하고 contextual81 생성 출처를 재감사했습니다. 신규 생성·GPU·LLM 판정 없음. [결과](results/2026-11-02_copyright80/README.md) · [방법](docs/2026-11-02_METHODS.md) · [contextual 감사](experiments/2026-11-02_contextual81/README.md)
 
 > **2026-10-30 완료 / Completed:** SP30/40/50/55/60의 **1,590개 신규 판정**과 별도 원시자료·통계 검증을 완료했습니다. FP16 318개는 전일 재사용이며 오늘 분석은 1,908개입니다. [오늘 결과](results/2026-10-30_intermediate159/README.md) · [품질 기술통계](results/2026-10-30_quality/README.md) · [고정 방법](docs/2026-10-30_METHODS.md) · [준비도 감사](docs/2026-10-30_READINESS.md) · [검토 근거](docs/2026-10-30_REVIEW.md)
@@ -9,6 +11,13 @@ SparseGPT 저장 응답의 안전성 평가자 차이를 조사한 **탐색적 �
 ## 날짜별 실험 기록 / Daily research log
 
 날짜가 확인된 실제 수행 내용을 기록합니다. **모델 판정 실행, 코드 준비, 통계·품질 분석, 준비도 감사는 구분**하며, 계획만 있는 작업을 완료로 표시하지 않습니다. 날짜 근거가 없는 이전 준비·분석 단계는 임의로 날짜를 붙이지 않고 [단계별 연구 기록](docs/RESEARCH_HISTORY.md)에 남깁니다.
+
+### 2026-11-02 — 추가 주 실험: 단어 순서·문맥과 평가자 불일치
+
+- **목적·설계:** 159개 standard 유해 문맥과 중립 정원 요청 하나에서 유창/단어재배열 정원 입력을 비교했습니다. 1,272개 통제 판정 + 기존 seed42 SP70 재실행318개 = **1,590개 새 판정**이며 모두 유효 이진값입니다. 앞서 완료한 copyright80 채점·contextual81 감사는 그대로 유지합니다.
+- **주 결과:** 유해 문맥에서 HB/LG 불일치가 **71/159→148/159**, S−F **+48.43%p**, 명목 대응-bootstrap95% **+40.88~+55.97%p**, exact McNemar p **1.32349×10⁻²³**입니다. 구간 전체가 +10%p 기준보다 높습니다. 사전 동결 전향적 탐색 실험이며 외부 사전등록은 아닙니다.
+- **검증·해석:** 1,590개 raw parser·입력 hash·단계 archive·최종 archive를 독립 검증했습니다. SP70 재실행318개는 과거 라벨·raw 출력과 일치했습니다. 결과는 제한된 통제 입력의 민감성이지 인간 검증 FPR/전체 정확도/가지치기 인과효과가 아닙니다. HB의 중립 문맥 yes는 unsafe 판정으로 해석하지 않습니다.
+- **자료:** [설계·결과·한계](docs/2026-11-02_PRIMARY_CONTROL.md) · [공개 라벨·분석 재현·테스트](experiments/2026-11-02_primary_control/README.md). 원본 동결 출력의 오해 소지가 있는 boolean은 보고용 projection에서 명시적 구간-기준 관계로 바꿨고 수치·검정은 바꾸지 않았습니다.
 
 ### 2026-11-02 — copyright80 저장 응답 채점·contextual81 출처 감사
 

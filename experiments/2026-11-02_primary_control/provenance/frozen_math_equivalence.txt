@@ -1,0 +1,1 @@
+PASS 15 synthetic scenarios: every numerical field matches immutable analyze.py contrast. Misleading boolean intentionally excluded from public projection; separately reviewed interval relation is reporting-only. No outcomes used in synthetic tests.
