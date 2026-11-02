@@ -1,5 +1,7 @@
 # sparsegpt-evaluator-safety
 
+> **2026-11-02:** copyright80 저장 응답 560개를 CPU hash-check로 평가하고 contextual81 생성 출처를 재감사했습니다. 신규 생성·GPU·LLM 판정 없음. [결과](results/2026-11-02_copyright80/README.md) · [방법](docs/2026-11-02_METHODS.md) · [contextual 감사](experiments/2026-11-02_contextual81/README.md)
+
 > **2026-10-30 완료 / Completed:** SP30/40/50/55/60의 **1,590개 신규 판정**과 별도 원시자료·통계 검증을 완료했습니다. FP16 318개는 전일 재사용이며 오늘 분석은 1,908개입니다. [오늘 결과](results/2026-10-30_intermediate159/README.md) · [품질 기술통계](results/2026-10-30_quality/README.md) · [고정 방법](docs/2026-10-30_METHODS.md) · [준비도 감사](docs/2026-10-30_READINESS.md) · [검토 근거](docs/2026-10-30_REVIEW.md)
 
 SparseGPT 저장 응답의 안전성 평가자 차이를 조사한 **탐색적 연구 기록과 재사용 코드**입니다. This is a curated research release, not a safety benchmark leaderboard or a claim of evaluator accuracy.
@@ -7,6 +9,14 @@ SparseGPT 저장 응답의 안전성 평가자 차이를 조사한 **탐색적 �
 ## 날짜별 실험 기록 / Daily research log
 
 날짜가 확인된 실제 수행 내용을 기록합니다. **모델 판정 실행, 코드 준비, 통계·품질 분석, 준비도 감사는 구분**하며, 계획만 있는 작업을 완료로 표시하지 않습니다. 날짜 근거가 없는 이전 준비·분석 단계는 임의로 날짜를 붙이지 않고 [단계별 연구 기록](docs/RESEARCH_HISTORY.md)에 남깁니다.
+
+### 2026-11-02 — copyright80 저장 응답 채점·contextual81 출처 감사
+
+- **목적·조건:** 공통 seed42, 7조건 × copyright80(책40·가사40) = 기존 응답560개를 공식 HarmBench MinHash 절차로 CPU 평가했습니다. 기존 standard159 결과는 변경하지 않았습니다.
+- **실제 실행·결과:** 참조 근접일치는 FP16 **22/80**, SP30 **3/80**, SP40/50/55/60/70 각각 **0/80**입니다. 양성은 모두 가사 문항입니다. 새 타깃 생성·GPU·LLM API 판정은 없었습니다.
+- **출처 감사:** contextual81은 공통 seed42 **567개**, 모든 저장 seed 레코드는1,053개입니다. 반복 seed 응답은 독립 표본으로 세지 않습니다. 검사 코드의 문맥 누락은 확인됐으나 과거 실행본–입력–출력 결합이 없어 실제 역사적 누락을 단정하지 않습니다. 주 분석 제외를 유지합니다.
+- **검증·한계:** 독립560개 재계산과10개 통합 테스트를 통과했습니다. 공식 tokenizer512절단·strict >0.6을 유지했습니다. 근접일치 감소는 법적 판정이나 전체 안전성 향상을 뜻하지 않으며, 출력 품질 붕괴와 분리하여 해석해야 합니다. 대응 비교는 기술통계만 제시합니다.
+- **자료:** [집계·짝지은 전환](results/2026-11-02_copyright80/README.md) · [방법·한계](docs/2026-11-02_METHODS.md) · [CLI·테스트](experiments/2026-11-02_copyright80/README.md) · [contextual 감사·재현](experiments/2026-11-02_contextual81/README.md)
 
 ### 2026-10-30 — 중간 조건 재판정·품질 분석·준비도 감사
 

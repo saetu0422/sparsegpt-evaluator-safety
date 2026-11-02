@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "equivalent_scientific_summary": true,
+  "equivalent_636_record_hashes": true,
+  "private_path_and_drive_id_scan": "PASS",
+  "raw_context_scan": "PASS",
+  "new_inference_or_external_write": false,
+  "missing_input_negative_test": "PASS",
+  "optimized_python_negative_test": "PASS"
+}

@@ -1,0 +1,26 @@
+{
+  "repo": "cais/HarmBench-Llama-2-13b-cls",
+  "revision": "bda705349d1144fa618770bea64d99ce54e3835b",
+  "files": [
+    {
+      "file": "config.json",
+      "sha256": "19af1a6d4bd84bffde19a062ac3cd798fee393d02a40e03dd9c95357e2f2bd70",
+      "bytes": 754
+    },
+    {
+      "file": "special_tokens_map.json",
+      "sha256": "2ea88203b955648951a454e73a73967ff77ba4e79ae8ceb4400d4ab2cb040777",
+      "bytes": 435
+    },
+    {
+      "file": "tokenizer.model",
+      "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+      "bytes": 499723
+    },
+    {
+      "file": "tokenizer_config.json",
+      "sha256": "a6e4720e1b56223aca5a7554b7e3ecd5c77a13a74fe975150f2d5d22f9a7d4ca",
+      "bytes": 932
+    }
+  ]
+}
