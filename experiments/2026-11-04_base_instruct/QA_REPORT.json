@@ -1,0 +1,26 @@
+{
+  "review_date": "2026-11-04",
+  "numeric_consistency": "pass",
+  "exact_mcnemar_and_holm_recalculation": "pass",
+  "all_figures_visually_reviewed": "pass",
+  "replay_files_byte_identical": {
+    "base_instruct_comparison.pdf": true,
+    "SUMMARY_TABLE.md": true,
+    "summary_table.csv": true,
+    "figures/figure3_summary_table.pdf": true,
+    "figures/figure3_summary_table.svg": true,
+    "figures/figure3_summary_table.png": true,
+    "figures/figure2_disagreement_quality.pdf": true,
+    "figures/figure2_disagreement_quality.svg": true,
+    "figures/figure2_disagreement_quality.png": true,
+    "figures/figure1_judge_rates.pdf": true,
+    "figures/figure1_judge_rates.svg": true,
+    "figures/figure1_judge_rates.png": true
+  },
+  "public_content": "Aggregate-only; no raw prompts, responses or individual judge records",
+  "versions": {
+    "python": "3.12.14",
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5"
+  }
+}

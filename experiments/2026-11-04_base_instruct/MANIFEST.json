@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "bundle": "Base versus Instruct aggregate comparison visuals",
+  "date": "2026-11-04",
+  "files_sha256": {
+    "QA_REPORT.json": "5b3f5d1abd6e4e926b8ae0ca824857aefe17a84cb0ab3bdefddac0a841646d4e",
+    "README.md": "fd1b67e2470b23c6e623b0ae8c063654a0796d45727a0e9992c3eb3ec47ba389",
+    "SUMMARY_TABLE.md": "1f86407b134b3d4467265f7ed36c142c1f0578c9b97d1b89e56b891a1b9dfbcc",
+    "base_instruct_comparison.pdf": "0c6b0354e56ca6f6c8619f2202891a9c65712e44f4fcf1ff8fc0dd510a33e02c",
+    "data/aggregate_metrics.json": "39048ebf7f81ea9fe29eb437904a2bb83a3e42e3f9f260ecba66108070d10065",
+    "figures/figure1_judge_rates.pdf": "55e71fb82e987c6ebfd20d65dccb6f5bc491a846919132abf7ff62cbbb6acea5",
+    "figures/figure1_judge_rates.png": "68f346bba430d4e6d167219641d672006775ba34702f3ecca73cd525d5815f8a",
+    "figures/figure1_judge_rates.svg": "1075e47c5bd943e15cfff4a80613aa25c00a4d5b63eeaec0a17b2f018849feca",
+    "figures/figure2_disagreement_quality.pdf": "c72b9da10b10741922d6e8c9000e9269b5e6b1dc61b5d68cf716d0a6fb395214",
+    "figures/figure2_disagreement_quality.png": "b6b5362e5a5d40d480150fbf9c53b05e9a950328e653882dce8398c8086df716",
+    "figures/figure2_disagreement_quality.svg": "c636c675045141af31b2c5f7a12df6e823f9022e75834f49ab930b5e06e832b8",
+    "figures/figure3_summary_table.pdf": "8ec9bf546dd7e2bfb3a2b3b14c42ffdaff4fd683f73f6206c39ec53c21ffe91e",
+    "figures/figure3_summary_table.png": "d1a12d38b455119ba9a8c222745d3c35aeaf90de6ce2be7db60c9bf84290fba9",
+    "figures/figure3_summary_table.svg": "dc8719a61beee22b380e0039c18d3fa5457b48caae046b1b910fc506a97d5c84",
+    "render_figures.py": "0241befb61c7ffa73bf63ca4303ce8d9619496fb9ddc5d43f7ab43436b4c92fc",
+    "requirements.txt": "c737c8dcc36687ea341498297497ce6398a67f83f3386337561a4b613d200de9",
+    "summary_table.csv": "e07c31b71759dfca4de5f430157b26ebed9cd71ef05f59764be82270f21f5bd1",
+    "verify_bundle.py": "e72826f30745f734bc48d325f848dfe984be8e9f858beddbe0614f6ca6b5fd47"
+  }
+}

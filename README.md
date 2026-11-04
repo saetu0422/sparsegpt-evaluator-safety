@@ -1,5 +1,7 @@
 # sparsegpt-evaluator-safety
 
+> **2026-11-04 Base/Instruct 비교 시각화:** 같은 159개 행동·7조건의 저장 응답을 공통 평가자 기준으로 비교한 집계 표와 그래프를 공개했습니다. [비교·해석 범위](experiments/2026-11-04_base_instruct/README.md) · [3쪽 PDF](experiments/2026-11-04_base_instruct/base_instruct_comparison.pdf)
+
 > **2026-11-02 R1/R2 통계 종결:** 최종 standard159의 품질 층화·회귀, FP16 기준 Holm12와 별도 인접 Holm10, κ/PABAK를 재분석했습니다. [결과와 한계](docs/2026-11-02_R1_R2.md) · [텍스트 없는 CPU 재현](experiments/2026-11-02_r1_r2/README.md)
 
 > **2026-11-02 추가 주 실험:** 1,590개 통제·재실행 판정 완료. [결과·한계](docs/2026-11-02_PRIMARY_CONTROL.md) · [재현 코드](experiments/2026-11-02_primary_control/README.md)
@@ -13,6 +15,15 @@ SparseGPT 저장 응답의 안전성 평가자 차이를 조사한 **탐색적 �
 ## 날짜별 실험 기록 / Daily research log
 
 날짜가 확인된 실제 수행 내용을 기록합니다. **모델 판정 실행, 코드 준비, 통계·품질 분석, 준비도 감사는 구분**하며, 계획만 있는 작업을 완료로 표시하지 않습니다. 날짜 근거가 없는 이전 준비·분석 단계는 임의로 날짜를 붙이지 않고 [단계별 연구 기록](docs/RESEARCH_HISTORY.md)에 남깁니다.
+
+### 2026-11-04 — Base와 기존 Instruct 참조의 집계 비교 시각화
+
+- **범위:** 159개 공통 행동 × 7조건의 Base/기존 Instruct 저장 응답 비교 결과를 집계 표·그래프로 정리했습니다. 이번 공개 패키지는 새 생성·판정을 실행하는 코드가 아니라 이미 계산한 집계 수치의 시각화 재현입니다.
+- **주 결과:** Base의 HB/LG 일치율은 조건별 **5.7–30.2%**입니다. Base는 FP16부터 반복이 강하며, 같은 단어 기준 붕괴 대리지표는 FP16 **128/159**, SP70 **159/159**입니다. 낮은 HB unsafe 비율을 안전성 향상으로 해석하지 않습니다.
+- **조건 표기:** FP16은 가지치기하지 않은 기준선이며, SPxx는 목표 sparsity xx% 조건입니다.
+- **검정·한계:** 14개 조건×평가자 대응 비교에 exact McNemar·Holm 보정을 적용했습니다. 공통 평가자·동일 행동 코퍼스 비교이며, 순수한 instruction-tuning 인과 실험은 아닙니다. Base의 중복 BOS와 과거 Instruct 생성 연결 미확인 등 비교 한계를 함께 명시했습니다.
+- **공개·검증:** 집계 JSON/CSV, 표, PNG/PDF/SVG, 렌더링 코드와 SHA-256 무결성 목록을 제공합니다. 수치 일관성·표/그래프 재현·공개 내용 검사를 수행했으며, 원문 prompt/response·개별 판정·비공개 링크·계정 정보는 포함하지 않습니다.
+- **자료:** [결과·방법·한계](experiments/2026-11-04_base_instruct/README.md) · [요약 표](experiments/2026-11-04_base_instruct/SUMMARY_TABLE.md) · [3쪽 PDF](experiments/2026-11-04_base_instruct/base_instruct_comparison.pdf)
 
 ### 2026-11-02 — 최종 standard159 R1/R2 통계 분석
 
