@@ -4,23 +4,37 @@
   "exact_mcnemar_and_holm_recalculation": "pass",
   "all_figures_visually_reviewed": "pass",
   "replay_files_byte_identical": {
-    "base_instruct_comparison.pdf": true,
     "SUMMARY_TABLE.md": true,
     "summary_table.csv": true,
+    "base_instruct_comparison.pdf": true,
     "figures/figure3_summary_table.pdf": true,
     "figures/figure3_summary_table.svg": true,
     "figures/figure3_summary_table.png": true,
+    "figures/figure1_judge_rates.png": true,
     "figures/figure2_disagreement_quality.pdf": true,
-    "figures/figure2_disagreement_quality.svg": true,
-    "figures/figure2_disagreement_quality.png": true,
     "figures/figure1_judge_rates.pdf": true,
+    "figures/figure2_disagreement_quality.png": true,
     "figures/figure1_judge_rates.svg": true,
-    "figures/figure1_judge_rates.png": true
+    "figures/figure2_disagreement_quality.svg": true
   },
   "public_content": "Aggregate-only; no raw prompts, responses or individual judge records",
   "versions": {
     "python": "3.12.14",
     "matplotlib": "3.10.8",
     "numpy": "2.3.5"
-  }
+  },
+  "revision": "2026-11-04 comparability clarification",
+  "aggregate_and_csv_unchanged": {
+    "data/aggregate_metrics.json": true,
+    "summary_table.csv": true
+  },
+  "independent_scipy_mcnemar_14_and_holm": "pass",
+  "visual_review": {
+    "pdf_pages_1_to_3": "pass; actual rasterized pages inspected; all labels and footnotes readable, no clipping or overlaps",
+    "png_figures": "pass; all three actual PNG figures inspected",
+    "svg_files": "pass; all three SVG files rasterized with Inkscape and actual output images visually inspected; no clipping, overlaps or glyph issues"
+  },
+  "documentation_boundary": "pass; source and metadata differences distinguished from verified historical execution; SP30/SP40 path mismatch and SP50 path-only agreement disclosed; historical calibration-sample or effective pad/EOS differences not asserted",
+  "clarification_scope": "Pruning and target-generation source/provenance differences; no assertion that actual historical calibration samples, template bytes or effective pad/EOS values differed.",
+  "source_audit_scope": "Multiple candidate pruning sources exist, including non-v2 SP30/SP40 sources. Available source and archived metadata are compared; historical executed-source, calibration-token and checkpoint-to-output linkage remain unverified."
 }

@@ -2,6 +2,8 @@
 
 > **2026-11-04 Base/Instruct 비교 시각화:** 같은 159개 행동·7조건의 저장 응답을 공통 평가자 기준으로 비교한 집계 표와 그래프를 공개했습니다. [비교·해석 범위](experiments/2026-11-04_base_instruct/README.md) · [3쪽 PDF](experiments/2026-11-04_base_instruct/base_instruct_comparison.pdf)
 
+> **2026-11-04 조건 설명 정정:** calibration과 타깃 생성 절차는 동일 조건으로 검증되지 않았습니다. Base는 원본02 그대로가 아닌 재작성 runner이며, 보관 v2 calibration 경로와 과거 checkpoint 연결의 한계를 명시했습니다. 수치는 변경하지 않았고 instruction-tuning 효과로 해석하지 않습니다. [정정·근거 범위](experiments/2026-11-04_base_instruct/README.md#comparability-clarification-2026-11-04)
+
 > **2026-11-02 R1/R2 통계 종결:** 최종 standard159의 품질 층화·회귀, FP16 기준 Holm12와 별도 인접 Holm10, κ/PABAK를 재분석했습니다. [결과와 한계](docs/2026-11-02_R1_R2.md) · [텍스트 없는 CPU 재현](experiments/2026-11-02_r1_r2/README.md)
 
 > **2026-11-02 추가 주 실험:** 1,590개 통제·재실행 판정 완료. [결과·한계](docs/2026-11-02_PRIMARY_CONTROL.md) · [재현 코드](experiments/2026-11-02_primary_control/README.md)
@@ -21,7 +23,9 @@ SparseGPT 저장 응답의 안전성 평가자 차이를 조사한 **탐색적 �
 - **범위:** 159개 공통 행동 × 7조건의 Base/기존 Instruct 저장 응답 비교 결과를 집계 표·그래프로 정리했습니다. 이번 공개 패키지는 새 생성·판정을 실행하는 코드가 아니라 이미 계산한 집계 수치의 시각화 재현입니다.
 - **주 결과:** Base의 HB/LG 일치율은 조건별 **5.7–30.2%**입니다. Base는 FP16부터 반복이 강하며, 같은 단어 기준 붕괴 대리지표는 FP16 **128/159**, SP70 **159/159**입니다. 낮은 HB unsafe 비율을 안전성 향상으로 해석하지 않습니다.
 - **조건 표기:** FP16은 가지치기하지 않은 기준선이며, SPxx는 목표 sparsity xx% 조건입니다.
-- **검정·한계:** 14개 조건×평가자 대응 비교에 exact McNemar·Holm 보정을 적용했습니다. 공통 평가자·동일 행동 코퍼스 비교이며, 순수한 instruction-tuning 인과 실험은 아닙니다. Base의 중복 BOS와 과거 Instruct 생성 연결 미확인 등 비교 한계를 함께 명시했습니다.
+- **검정·한계:** 14개 조건×평가자 대응 비교에 exact McNemar·Holm 보정을 적용했습니다. 수치는 저장 코퍼스의 기술적 비교이며 동일 조건 또는 instruction-tuning 인과 효과가 아닙니다.
+- **생성 조건 정정:** Base는 원본02 그대로가 아닌 재작성 runner입니다. 원본02 소스는 전체320, Base 소스는 standard159 선필터 후 batch8로 처리하므로 소스의 입력·배치 구성이 일치하지 않습니다. 과거 실제 입력 배치의 독립 기록은 없습니다. 템플릿 제공 방식·EOS 명시·장치 배치 경로가 다르지만, 과거 실제 템플릿/EOS/pad 값이 달랐다고 단정하지 않습니다.
+- **Calibration·출처 정정:** non-v2 SP30/SP40를 포함한 복수의 과거 후보 소스가 있으나 특정 소스와 비교 대상 checkpoint의 실행 연결은 미확인입니다. 보관 Instruct v2 소스의 C4 streaming shuffle과 Base01의 첫 shard random 선정 경로는 다릅니다. 다만 SP30/SP40 응답의 비-v2 model_dir와 현재 보관 v2 폴더 연결은 미확인이며, SP50의 v2 경로 일치도 checkpoint hash 증명이 아닙니다. 실제 과거 calibration 표본 차이나 특정 구현의 인과 효과는 확정하지 않습니다.
 - **공개·검증:** 집계 JSON/CSV, 표, PNG/PDF/SVG, 렌더링 코드와 SHA-256 무결성 목록을 제공합니다. 수치 일관성·표/그래프 재현·공개 내용 검사를 수행했으며, 원문 prompt/response·개별 판정·비공개 링크·계정 정보는 포함하지 않습니다.
 - **자료:** [결과·방법·한계](experiments/2026-11-04_base_instruct/README.md) · [요약 표](experiments/2026-11-04_base_instruct/SUMMARY_TABLE.md) · [3쪽 PDF](experiments/2026-11-04_base_instruct/base_instruct_comparison.pdf)
 
@@ -142,3 +146,4 @@ GPU execution is an explicit operator action with model-access requirements. No 
 ## Attribution and license status
 
 HarmBench's standard classifier template is included under its upstream MIT notice, with the experiment's whitespace adaptation disclosed in [third-party notices](THIRD_PARTY_NOTICES.md). Model weights/tokenizer files and benchmark corpora are not redistributed. **No project-wide license has been selected in this release**; the third-party license does not license unrelated project code. Consult upstream model terms before use.
+

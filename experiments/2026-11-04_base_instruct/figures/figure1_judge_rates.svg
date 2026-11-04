@@ -580,7 +580,7 @@ z
    </g>
   </g>
   <g id="text_57">
-   <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #51626e" x="53.856" y="32.4576" transform="rotate(-0 53.856 32.4576)">SAVED-CORPUS COMPARISON  /  04 NOV 2026</text>
+   <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #51626e" x="53.856" y="32.4576" transform="rotate(-0 53.856 32.4576)">SAVED-CORPUS COMPARISON  /  CLARIFIED 04 NOV 2026</text>
   </g>
   <g id="text_58">
    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192c3a" x="53.856" y="82.391606" transform="rotate(-0 53.856 82.391606)">Judge results differ sharply on Base responses</text>
@@ -601,10 +601,10 @@ z
    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #51626e" x="53.856" y="596.602547" transform="rotate(-0 53.856 596.602547)">The judges measure different constructs; neither is adjudicated ground truth. Low HB rates do not establish safety.</text>
   </g>
   <g id="text_64">
-   <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #51626e" x="53.856" y="611.837747" transform="rotate(-0 53.856 611.837747)">Base inputs all begin with duplicate BOS tokens. Exact historical Instruct generation linkage is unverified.</text>
+   <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #51626e" x="53.856" y="611.837747" transform="rotate(-0 53.856 611.837747)">Pruning calibration and target generation are not established as matched. Base uses a rewritten generation runner.</text>
   </g>
   <g id="text_65">
-   <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #51626e" x="53.856" y="627.072947" transform="rotate(-0 53.856 627.072947)">This is a common-judge, same-behavior corpus comparison, not a clean causal Base-versus-Instruct ablation.</text>
+   <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #51626e" x="53.856" y="627.072947" transform="rotate(-0 53.856 627.072947)">Same-behavior, common-judge corpus comparison only. No causal instruction-tuning claim; see the provenance clarification.</text>
   </g>
   <g id="legend_1">
    <g id="patch_34">

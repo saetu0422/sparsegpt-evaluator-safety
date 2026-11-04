@@ -88,7 +88,7 @@ def validate():
         assert math.isclose(running, r['holm_p'], rel_tol=1e-10, abs_tol=1e-50)
 
 def title(fig, main, sub, number):
-    fig.text(.055, .951, "SAVED-CORPUS COMPARISON  /  04 NOV 2026", size=9.5, color=MUTED, weight="bold")
+    fig.text(.055, .951, "SAVED-CORPUS COMPARISON  /  CLARIFIED 04 NOV 2026", size=9.5, color=MUTED, weight="bold")
     fig.text(.055, .902, main, size=23, weight="bold", va="top")
     fig.text(.055, .85, sub, size=11, color=MUTED, va="top")
     fig.text(.945, .037, f"{number:02d}", size=10, ha="right", color=MUTED)
@@ -139,8 +139,8 @@ def rates(pdf):
     fig.text(.56, .165, "LG: unsafe content under its category policy.", size=10.4, color=MUTED)
     footnote(fig, [
         "The judges measure different constructs; neither is adjudicated ground truth. Low HB rates do not establish safety.",
-        "Base inputs all begin with duplicate BOS tokens. Exact historical Instruct generation linkage is unverified.",
-        "This is a common-judge, same-behavior corpus comparison, not a clean causal Base-versus-Instruct ablation.",
+        "Pruning calibration and target generation are not established as matched. Base uses a rewritten generation runner.",
+        "Same-behavior, common-judge corpus comparison only. No causal instruction-tuning claim; see the provenance clarification.",
     ])
     save(fig, "figure1_judge_rates", pdf)
 
@@ -201,7 +201,7 @@ def diagnostics(pdf):
     footnote(fig, [
         "Top panels show all 159 responses; segment labels are counts where space allows. 'Not unsafe' is a judge label, not a safety claim.",
         "Repetition and collapse are length-sensitive heuristics, not human-adjudicated failure. Lines connect ordered conditions only.",
-        "Duplicate BOS occurs in all 1,113 Base inputs. This observed Base configuration is not a demonstrated cause.",
+        "Pruning/generation are not established as matched. Base has duplicate BOS; neither configuration nor repetition is a proven cause.",
     ])
     save(fig, "figure2_disagreement_quality", pdf)
 
@@ -244,10 +244,10 @@ def table_and_scope(pdf):
              size=10.7, color=MUTED, va="top", linespacing=1.8)
     fig.text(.055, .255, "Interpretation boundary", weight="bold", size=13)
     fig.text(.055, .218,
-             "Verified: 159 shared behaviors, 1,113 response pairs, 2,226 paired judge labels; reference labels and hashes match\n"
-             "the original Oct 29 / Oct 30 judged records. Matching judge settings do not make generation pipelines identical.\n"
-             "All Base inputs start with duplicate BOS. Historical Instruct prompt/code/tokenizer/runtime and checkpoint linkage\n"
-             "are not established here. Neither judge resolves the other judge's labels; no causal instruction-tuning claim follows.",
+             "Shared behaviors and judged-record hashes are verified; pruning and target-generation equivalence is not.\n"
+             "C4 calibration-source routes differ; multiple historical candidates exist without verified source/checkpoint linkage.\n"
+             "Base uses rewritten generation code: 159-versus-320 input selection, explicit EOS override and different device placement.\n"
+             "Historical effective settings, calibration samples and checkpoint/output linkage remain unverified. No causal tuning claim.",
              size=10.7, color=MUTED, va="top", linespacing=1.8)
     footnote(fig, [
         "Collapse proxy: >=50 words with unique-word ratio <0.10 or trigram repetition >=0.80; or >=20 words with dominance >=0.30.",
@@ -278,7 +278,7 @@ def write_tables():
         b,ins=rows[2*i:2*i+2]
         lines.append(f"| {c} | {b['HB_unsafe_count']} / {ins['HB_unsafe_count']} | {b['LG_unsafe_count']} / {ins['LG_unsafe_count']} | {b['judge_agreement_count']} / {ins['judge_agreement_count']} | {b['collapse_proxy_count']} / {ins['collapse_proxy_count']} | {b['mean_word_trigram_repetition']:.3f} / {ins['mean_word_trigram_repetition']:.3f} |")
     lines += ['', '**Interpretation:** Low HB rates do not establish safety. Judges apply different constructs; neither is adjudicated ground truth. Base already shows severe repetitive output at FP16.',
-              '', '**Comparability limit:** All 1,113 Base inputs begin with duplicate BOS; historical Instruct generation linkage is unverified. This is a common-judge, same-behavior corpus comparison, not a clean causal instruction-tuning ablation.']
+              '', '**Comparability limit:** Pruning calibration and target-generation execution have not been established as matched. Multiple candidate historical pruning implementations exist, including non-v2 SP30/SP40 sources, without executed-source linkage to each compared checkpoint. Archived Instruct SP30/SP40/SP50 v2 metadata points to a different calibration route from Base 01; SP30/SP40 saved-response paths do not name those v2 folders, so the historical linkage is unresolved. SP50 path agreement is not checkpoint-hash proof. Base uses a rewritten generation runner. Input selection/batch composition and pad/EOS provision are not a verified replay of original02; historical effective EOS/pad values and actual calibration samples are not asserted to differ. All 1,113 Base inputs begin with duplicate BOS. This is a descriptive saved-corpus comparison, not an identical-condition or causal instruction-tuning ablation.']
     (OUT/'SUMMARY_TABLE.md').write_text('\n'.join(lines)+'\n')
 
 def main():

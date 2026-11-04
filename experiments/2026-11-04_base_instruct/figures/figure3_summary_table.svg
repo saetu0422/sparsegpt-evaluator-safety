@@ -565,7 +565,7 @@ z
    </g>
   </g>
   <g id="text_49">
-   <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #51626e" x="53.856" y="32.4576" transform="rotate(-0 53.856 32.4576)">SAVED-CORPUS COMPARISON  /  04 NOV 2026</text>
+   <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #51626e" x="53.856" y="32.4576" transform="rotate(-0 53.856 32.4576)">SAVED-CORPUS COMPARISON  /  CLARIFIED 04 NOV 2026</text>
   </g>
   <g id="text_50">
    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192c3a" x="53.856" y="82.391606" transform="rotate(-0 53.856 82.391606)">Counts and interpretation at a glance</text>
@@ -588,10 +588,10 @@ z
    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192c3a" x="53.856" y="493.488" transform="rotate(-0 53.856 493.488)">Interpretation boundary</text>
   </g>
   <g id="text_56">
-   <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #51626e" transform="translate(53.856 526.127128)">Verified: 159 shared behaviors, 1,113 response pairs, 2,226 paired judge labels; reference labels and hashes match</text>
-   <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #51626e" transform="translate(53.856 542.986984)">the original Oct 29 / Oct 30 judged records. Matching judge settings do not make generation pipelines identical.</text>
-   <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #51626e" transform="translate(53.856 559.846841)">All Base inputs start with duplicate BOS. Historical Instruct prompt/code/tokenizer/runtime and checkpoint linkage</text>
-   <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #51626e" transform="translate(53.856 576.706697)">are not established here. Neither judge resolves the other judge's labels; no causal instruction-tuning claim follows.</text>
+   <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #51626e" transform="translate(53.856 526.127128)">Shared behaviors and judged-record hashes are verified; pruning and target-generation equivalence is not.</text>
+   <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #51626e" transform="translate(53.856 542.986984)">C4 calibration-source routes differ; multiple historical candidates exist without verified source/checkpoint linkage.</text>
+   <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #51626e" transform="translate(53.856 559.846841)">Base uses rewritten generation code: 159-versus-320 input selection, explicit EOS override and different device placement.</text>
+   <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #51626e" transform="translate(53.856 576.706697)">Historical effective settings, calibration samples and checkpoint/output linkage remain unverified. No causal tuning claim.</text>
   </g>
   <g id="text_57">
    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #51626e" x="53.856" y="596.602547" transform="rotate(-0 53.856 596.602547)">Collapse proxy: &gt;=50 words with unique-word ratio &lt;0.10 or trigram repetition &gt;=0.80; or &gt;=20 words with dominance &gt;=0.30.</text>
