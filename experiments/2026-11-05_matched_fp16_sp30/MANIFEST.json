@@ -1,0 +1,25 @@
+{
+  "schema": "matched-public-aggregate-manifest-v1",
+  "files": {
+    "README.md": {
+      "bytes": 5953,
+      "sha256": "ccd0a68073357a29afebbf6c065bfd82eff672e28081dd91e41128b3381eda50"
+    },
+    "cells.csv": {
+      "bytes": 617,
+      "sha256": "86128efb1c38c8cf8920aada57944c0661f58214996c106807da4f0253f6b73e"
+    },
+    "comparisons.csv": {
+      "bytes": 1495,
+      "sha256": "942c99cd4a0bf90550807b57e6d1d1f64102937d26901e8cfd647ddcf6ab7854"
+    },
+    "results.json": {
+      "bytes": 9732,
+      "sha256": "31ffd2dbc185072af93f8759805341a805455075b87c63f51e3b3cb365ceef2e"
+    },
+    "verify_aggregates.py": {
+      "bytes": 5011,
+      "sha256": "bb7345fa1e69653e817e8121f0488743e26cc7a3b81a5195b648eea86de4c323"
+    }
+  }
+}

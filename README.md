@@ -1,5 +1,7 @@
 # sparsegpt-evaluator-safety
 
+> **2026-11-05 새 matched FP16/SP30 비교:** Base·Instruct의 공통 standard159에 대한 1,272개 판정과 평가자별 집계를 공개했습니다. 단일 seed 기술통계이며 이전 7조건 결과와 구분합니다. [결과·방법·한계](experiments/2026-11-05_matched_fp16_sp30/README.md)
+
 > **2026-11-04 Base/Instruct 비교 시각화:** 같은 159개 행동·7조건의 저장 응답을 공통 평가자 기준으로 비교한 집계 표와 그래프를 공개했습니다. [비교·해석 범위](experiments/2026-11-04_base_instruct/README.md) · [3쪽 PDF](experiments/2026-11-04_base_instruct/base_instruct_comparison.pdf)
 
 > **2026-11-04 조건 설명 정정:** calibration과 타깃 생성 절차는 동일 조건으로 검증되지 않았습니다. Base는 원본02 그대로가 아닌 재작성 runner이며, 보관 v2 calibration 경로와 과거 checkpoint 연결의 한계를 명시했습니다. 수치는 변경하지 않았고 instruction-tuning 효과로 해석하지 않습니다. [정정·근거 범위](experiments/2026-11-04_base_instruct/README.md#comparability-clarification-2026-11-04)
@@ -17,6 +19,15 @@ SparseGPT 저장 응답의 안전성 평가자 차이를 조사한 **탐색적 �
 ## 날짜별 실험 기록 / Daily research log
 
 날짜가 확인된 실제 수행 내용을 기록합니다. **모델 판정 실행, 코드 준비, 통계·품질 분석, 준비도 감사는 구분**하며, 계획만 있는 작업을 완료로 표시하지 않습니다. 날짜 근거가 없는 이전 준비·분석 단계는 임의로 날짜를 붙이지 않고 [단계별 연구 기록](docs/RESEARCH_HISTORY.md)에 남깁니다.
+
+### 2026-11-05: 새 matched FP16/SP30 Base·Instruct 비교
+
+- **범위:** 새 matched 프로토콜의 FP16/SP30 × Base/Instruct × HB/LG, 공통 standard159의 **1,272개 유효 판정**을 완료했습니다. 각 arm·조건에서 생성한 320개 전체의 안전성 점수가 아니며 invalid·abstained·excluded는 모두 0입니다.
+- **주 결과:** FP16 → SP30 unsafe 개수는 Base에서 HB **17 → 4**, LG **149 → 152**, Instruct에서 HB **5 → 7**, LG **3 → 6**입니다. 평가자는 합산하지 않습니다. Base의 평가자 차이가 크므로 HB 감소를 안전성 개선으로 해석하지 않습니다.
+- **방법·예외:** FP16/Base/HB의 원래 자동 보관 실패 후 검증된 원본을 복구했습니다. 서로 다른 A100 80 GB 세션을 연결한 FP16 집계는 물리 GPU UUID 차이만 허용하는 별도 adapter이며, 나머지 기록된 런타임 필드는 일치합니다. SP30은 변경 없는 동결 집계기를 사용했습니다. 원본 판정은 수정하지 않았습니다.
+- **검증·한계:** 원본 1,272개와 8개 집계 셀을 대조했고 공개 파일의 무결성과 산술을 검사했습니다. 단일 seed 기술통계로 유의성·인과효과·인간 기준 정확도를 주장하지 않습니다. 이전 7조건 결과의 역사적 조건 일치를 소급 입증하지 않으며 새 matched SP40 이상은 미완료입니다.
+- **공개:** 집계 CSV/JSON, 설명과 CPU 집계 검증기만 공개합니다. 원문·토큰 ID·개별 판정·GPU UUID 값·비공개 링크·운영 기록은 제외합니다. 기존 결과는 보존합니다.
+- **자료:** [결과·방법·한계](experiments/2026-11-05_matched_fp16_sp30/README.md) · [셀별 집계](experiments/2026-11-05_matched_fp16_sp30/cells.csv) · [대응 비교](experiments/2026-11-05_matched_fp16_sp30/comparisons.csv)
 
 ### 2026-11-04 — Base와 기존 Instruct 참조의 집계 비교 시각화
 
